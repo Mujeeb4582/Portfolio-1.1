@@ -34,6 +34,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
@@ -60,12 +61,42 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  .midnight_steel {
+    --background: 210 13% 19%;
+    /* #292F36 in HSL */
+    --foreground: 210 10% 95%;
+    /* Near-white contrasting color */
+    --card: 200 100% 5%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 200 100% 5%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 200 100% 5%;
+    --secondary: 200 100% 5%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 200 100% 5%;
+    --muted-foreground: 60 9.1% 97.8%;
+    --accent: 200 100% 5%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 200 100% 5%;
+    --input: 200 100% 5%;
+    --ring: 200 100% 5%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

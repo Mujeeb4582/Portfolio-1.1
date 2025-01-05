@@ -16,6 +16,9 @@ const config: Config = {
         ubuntu: 'var(--font-ubuntu)',
         ibmPlexMono: 'var(--font-ibm-plex-mono)',
       },
+      backgroundImage: {
+        'about-bg': "url('/aboutBackground.png')",
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

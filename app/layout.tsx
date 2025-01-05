@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { ThemeProvider } from '@/app/theme-provider'
+import Navbar from '@/app/ui/navbar'
 import { IBM_Plex_Mono, Ubuntu } from 'next/font/google'
-import { ThemeProvider } from './theme-provider'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -44,11 +45,12 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="midnight_steel"
           enableSystem
           themes={['light', 'dark', 'midnight_steel']}
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

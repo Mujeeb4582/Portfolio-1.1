@@ -67,8 +67,8 @@ body {
     /* #292F36 in HSL */
     --foreground: 210 10% 95%;
     /* Near-white contrasting color */
-    --card: 200 100% 5%;
-    --card-foreground: 60 9.1% 97.8%;
+    --card: 213.33, 14.75%, 11.96%;
+    --card-foreground: 213.33, 10.75%, 75.96%;
     --popover: 200 100% 5%;
     --popover-foreground: 60 9.1% 97.8%;
     --primary: 60 9.1% 97.8%;

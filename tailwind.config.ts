@@ -18,6 +18,7 @@ const config: Config = {
       },
       backgroundImage: {
         'about-bg': "url('/aboutBackground.png')",
+        'skills-bg': "url('/skillsBackground.png')",
       },
       colors: {
         background: 'hsl(var(--background))',

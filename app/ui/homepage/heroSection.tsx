@@ -61,7 +61,10 @@ export default function HeroSection() {
               ))}
             </div>
             <div className="">
-              <Button className="mb-9 mt-5 flex items-center gap-4 rounded-3xl px-8 py-4 font-ubuntu text-button-u">
+              <Button
+                variant="default"
+                className="mb-9 mt-5 flex items-center gap-4 rounded-3xl px-8 py-4 font-ubuntu !text-button-u"
+              >
                 <span>Download CV</span>
                 <Download />{' '}
               </Button>

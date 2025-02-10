@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/app/ui/navbar'
+import { ThemeProvider } from '@/app/ui/theme/theme-provider'
 import { IBM_Plex_Mono, Ubuntu } from 'next/font/google'
-import { ClientThemeProvider } from './ui/theme/clientThemeProvider'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -43,10 +43,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} ${ibmPlexMono.variable} antialiased`}
       >
-        <ClientThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="midnight_steel"
+          enableSystem
+          themes={['light', 'dark', 'midnight_steel']}
+          disableTransitionOnChange
+        >
           <Navbar />
           {children}
-        </ClientThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -1,6 +1,11 @@
+import { LucideProps } from 'lucide-react'
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react'
+
 interface SkillsCardProps {
   name: string
-  icon: React.ReactNode
+  icon: ForwardRefExoticComponent<
+    Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
+  >
   language?: {
     name: string
   }[]
@@ -15,7 +20,7 @@ export const SkillsCard: React.FC<SkillsCardProps> = ({
 }) => {
   return (
     <div className="flex h-[8.25rem] w-72 flex-col items-center space-y-2 rounded-lg bg-brand2 px-6 py-4 text-bg1">
-      <div>{icon}</div>
+      <div>{React.createElement(icon)}</div>
       <div className="font-ibmPlexMono text-menu-m">{name}</div>
       <div>
         {language &&

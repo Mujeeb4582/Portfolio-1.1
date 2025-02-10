@@ -1,4 +1,4 @@
-import { ThemeToggle } from '@/app/theme-toggle'
+import { ThemeToggle } from '@/app/ui/theme/theme-toggle'
 
 export default function Navbar() {
   return (

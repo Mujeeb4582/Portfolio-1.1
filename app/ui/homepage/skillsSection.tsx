@@ -1,39 +1,13 @@
-import { Monitor, Smartphone } from 'lucide-react'
-import { LanguageIcons } from '../languageIcons'
-import { SkillsCard } from '../skillsCard'
-import { CSSIcon, HTMLIcon, JSIcon, ReactIcon } from '../svgs'
-import { UnderLine } from '../underLine'
+import { LANGUAGE_ICONS, SKILLS } from '@/app/lib/constant'
+import { LanguageIcons } from '@/app/ui/languageIcons'
+import { SkillsCard } from '@/app/ui/skillsCard'
+import { UnderLine } from '@/app/ui/underLine'
 
 export default function SkillsSection() {
-  const languageIcons = [
-    { name: 'HTML', color: '#E54F26', icon: HTMLIcon },
-    { name: 'CSS', color: '#0C73B9', icon: CSSIcon },
-    { name: 'JS', color: '#E7A020', icon: JSIcon },
-    { name: 'React', color: '#28A9E0', icon: ReactIcon },
-  ]
-
-  const skills = [
-    {
-      name: 'Web Development',
-      languages: [
-        { name: 'HTML' },
-        { name: 'CSS' },
-        { name: 'JS' },
-        { name: 'React' },
-      ],
-      icon: <Monitor />,
-    },
-    {
-      name: 'App Development',
-      languages: [{ name: 'React Native' }, { name: 'Flutter' }],
-      icon: <Smartphone />,
-    },
-  ]
-
   return (
     <div className="relative flex flex-col space-y-4 pb-16 pt-8 text-center">
       <div
-        className="bg-skills-bg absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-skills-bg bg-cover bg-center bg-no-repeat"
         style={{ opacity: 0.1 }}
       ></div>
       <div className="flex flex-col items-center space-y-4">
@@ -48,8 +22,8 @@ export default function SkillsSection() {
         </p>
       </div>
       <div className="flex flex-col items-center space-y-8">
-        {skills &&
-          skills.map((skill) => (
+        {SKILLS &&
+          SKILLS.map((skill) => (
             <SkillsCard
               key={skill.name}
               name={skill.name}
@@ -59,8 +33,8 @@ export default function SkillsSection() {
           ))}
       </div>
       <div className="grid grid-cols-2 justify-center gap-4 pt-20">
-        {languageIcons &&
-          languageIcons.map((item) => (
+        {LANGUAGE_ICONS &&
+          LANGUAGE_ICONS.map((item) => (
             <LanguageIcons
               key={item.name}
               icon={item.icon}

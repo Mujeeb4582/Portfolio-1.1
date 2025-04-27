@@ -25,3 +25,39 @@ export const SKILLS = [
     icon: Smartphone,
   },
 ]
+
+export const WORK = [
+  {
+    name: 'Project 1',
+    languages: [
+      { name: 'HTML' },
+      { name: 'CSS' },
+      { name: 'JS' },
+      { name: 'React' },
+    ],
+    icon: Monitor,
+    description: 'This is a project description',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVukrmVSypMEscsW83Ab4Yax36AgUSov1pPw&s',
+  },
+  {
+    name: 'Project 2',
+    languages: [{ name: 'React Native' }, { name: 'Flutter' }],
+    icon: Smartphone,
+    description: 'This is a project description',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVukrmVSypMEscsW83Ab4Yax36AgUSov1pPw&s',
+  },
+  {
+    name: 'Project 3',
+    languages: [{ name: 'HTML' }, { name: 'CSS' }, { name: 'React' }],
+    icon: Monitor,
+    description: 'This is a new project description',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVukrmVSypMEscsW83Ab4Yax36AgUSov1pPw&s',
+  },
+  {
+    name: 'Project 4',
+    languages: [{ name: 'Node.js' }, { name: 'Express' }, { name: 'MongoDB' }],
+    icon: Monitor,
+    description: 'This project involves backend development',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVukrmVSypMEscsW83Ab4Yax36AgUSov1pPw&s',
+  },
+]

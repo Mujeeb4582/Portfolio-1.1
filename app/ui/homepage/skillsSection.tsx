@@ -10,8 +10,8 @@ export default function SkillsSection() {
         className="absolute inset-0 bg-skills-bg bg-cover bg-center bg-no-repeat"
         style={{ opacity: 0.1 }}
       ></div>
-      <div className="flex flex-col items-center space-y-4">
-        <div className="flex w-[8.875rem] flex-col items-center">
+      <div className="flex w-full flex-col items-center space-y-4">
+        <div className="flex min-w-[8.875rem] flex-col items-center">
           <h3 className="text-center font-ubuntu text-h1-u text-brand1">
             Skills
           </h3>

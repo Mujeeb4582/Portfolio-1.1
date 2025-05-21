@@ -23,6 +23,7 @@ export default function HeroSection() {
     { count: 6, category: 'Development Tools' },
     { count: 4, category: 'Years of Experience' },
   ]
+
   return (
     <div>
       <section className="mt-16 w-full px-9">

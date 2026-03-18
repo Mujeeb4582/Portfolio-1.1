@@ -10,7 +10,8 @@
     "prepare": "simple-git-hooks",
     "check-types": "bunx tsc --noEmit",
     "check-lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "vitest"
   },
   "simple-git-hooks": {
     "pre-commit": "bun run check-lint && bun run check-types"
@@ -36,18 +37,23 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^22",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@typescript-eslint/parser": "^8.16.0",
+    "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "^16.1.7",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "jsdom": "^29.0.0",
     "postcss": "^8",
     "prettier": "^3.4.1",
     "simple-git-hooks": "^2.13.1",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.0"
   }
 }

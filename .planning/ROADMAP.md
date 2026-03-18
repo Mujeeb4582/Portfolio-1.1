@@ -12,7 +12,7 @@ This roadmap transforms a stale brownfield Next.js 15 / React 18 / Tailwind v3 p
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Upgrade stack to Next.js 16 + React 19 + Tailwind v4, resolve all migration pitfalls, define types and content constants
+- [x] **Phase 1: Foundation** - Upgrade stack to Next.js 16 + React 19 + Tailwind v4, resolve all migration pitfalls, define types and content constants (completed 2026-03-18)
 - [ ] **Phase 2: Core Sections** - Build Hero, About, Skills, and Experience sections with real content
 - [ ] **Phase 3: Projects Section** - Build the 6 featured project cards with screenshots, tech badges, and links
 - [ ] **Phase 4: Navigation + Animations** - Wire sticky nav, smooth scroll, active section highlight, mobile menu, and scroll-reveal animations
@@ -103,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/4 | In Progress|  |
+| 1. Foundation | 4/4 | Complete   | 2026-03-18 |
 | 2. Core Sections | 0/TBD | Not started | - |
 | 3. Projects Section | 0/TBD | Not started | - |
 | 4. Navigation + Animations | 0/TBD | Not started | - |

@@ -13,9 +13,9 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **FOUND-02**: Project upgrades to React 19 with all deprecated APIs resolved
 - [x] **FOUND-03**: Tailwind CSS migrates from v3 to v4 with CSS-first config (`@theme {}` directives)
 - [x] **FOUND-04**: shadcn/ui updates to v4 with Tailwind v4 compatibility
-- [ ] **FOUND-05**: All existing components compile and render correctly after upgrade
+- [x] **FOUND-05**: All existing components compile and render correctly after upgrade
 - [x] **FOUND-06**: Dark mode toggle works correctly with Tailwind v4 `@custom-variant`
-- [ ] **FOUND-07**: Dead code, unused imports, and placeholder content are removed
+- [x] **FOUND-07**: Dead code, unused imports, and placeholder content are removed
 - [x] **FOUND-08**: Data constants file (`constant.ts`) expanded with all portfolio content (projects, experience, skills, personal info)
 - [x] **FOUND-09**: TypeScript interfaces defined for all data structures (Project, Experience, Skill, etc.)
 
@@ -127,9 +127,9 @@ Deferred to future release. Tracked but not in current roadmap.
 | FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Complete |
-| FOUND-05 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Complete |
 | FOUND-06 | Phase 1 | Complete |
-| FOUND-07 | Phase 1 | Pending |
+| FOUND-07 | Phase 1 | Complete |
 | FOUND-08 | Phase 1 | Complete |
 | FOUND-09 | Phase 1 | Complete |
 | NAV-04 | Phase 1 | Complete |

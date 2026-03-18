@@ -9,8 +9,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Foundation & Stack Upgrade
 
-- [ ] **FOUND-01**: Project upgrades to Next.js 16 with Turbopack and React Compiler enabled
-- [ ] **FOUND-02**: Project upgrades to React 19 with all deprecated APIs resolved
+- [x] **FOUND-01**: Project upgrades to Next.js 16 with Turbopack and React Compiler enabled
+- [x] **FOUND-02**: Project upgrades to React 19 with all deprecated APIs resolved
 - [ ] **FOUND-03**: Tailwind CSS migrates from v3 to v4 with CSS-first config (`@theme {}` directives)
 - [ ] **FOUND-04**: shadcn/ui updates to v4 with Tailwind v4 compatibility
 - [ ] **FOUND-05**: All existing components compile and render correctly after upgrade
@@ -123,8 +123,8 @@ Deferred to future release. Tracked but not in current roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
-| FOUND-02 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
+| FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 1 | Pending |
 | FOUND-04 | Phase 1 | Pending |
 | FOUND-05 | Phase 1 | Pending |

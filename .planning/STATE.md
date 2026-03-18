@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-foundation-01-01-PLAN.md
-last_updated: "2026-03-18T12:54:27.459Z"
+stopped_at: Completed 01-foundation-01-02-PLAN.md
+last_updated: "2026-03-18T13:12:11.165Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 25 | 2 tasks | 12 files |
+| Phase 01-foundation P02 | 14 | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,9 @@ Recent decisions affecting current work:
 - [Pre-planning]: Contact form rate limiting — honeypot-only is acceptable fallback for low-traffic portfolio
 - [Phase 01-foundation]: Migrated ESLint to flat config (eslint.config.mjs) — eslint-config-next@16 requires flat config format
 - [Phase 01-foundation]: Cleared git core.hooksPath after husky removal — required for simple-git-hooks to install correctly
+- [Phase 01-foundation]: Used @source not ../.planning in globals.css to exclude planning docs from Tailwind v4 class scanning — ARCHITECTURE.md bg-[url(...)] caused Turbopack build failure
+- [Phase 01-foundation]: Removed eslint-plugin-tailwindcss (uses tailwindcss/resolveConfig removed in v4) — ESLint runs without Tailwind plugin
+- [Phase 01-foundation]: midnight_steel theme uses CSS variable overrides only (Option B) — not included in @custom-variant dark selector
 
 ### Pending Todos
 
@@ -79,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T12:54:27.457Z
-Stopped at: Completed 01-foundation-01-01-PLAN.md
+Last session: 2026-03-18T13:12:11.163Z
+Stopped at: Completed 01-foundation-01-02-PLAN.md
 Resume file: None

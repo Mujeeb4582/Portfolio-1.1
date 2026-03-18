@@ -11,10 +11,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **FOUND-01**: Project upgrades to Next.js 16 with Turbopack and React Compiler enabled
 - [x] **FOUND-02**: Project upgrades to React 19 with all deprecated APIs resolved
-- [ ] **FOUND-03**: Tailwind CSS migrates from v3 to v4 with CSS-first config (`@theme {}` directives)
-- [ ] **FOUND-04**: shadcn/ui updates to v4 with Tailwind v4 compatibility
+- [x] **FOUND-03**: Tailwind CSS migrates from v3 to v4 with CSS-first config (`@theme {}` directives)
+- [x] **FOUND-04**: shadcn/ui updates to v4 with Tailwind v4 compatibility
 - [ ] **FOUND-05**: All existing components compile and render correctly after upgrade
-- [ ] **FOUND-06**: Dark mode toggle works correctly with Tailwind v4 `@custom-variant`
+- [x] **FOUND-06**: Dark mode toggle works correctly with Tailwind v4 `@custom-variant`
 - [ ] **FOUND-07**: Dead code, unused imports, and placeholder content are removed
 - [ ] **FOUND-08**: Data constants file (`constant.ts`) expanded with all portfolio content (projects, experience, skills, personal info)
 - [ ] **FOUND-09**: TypeScript interfaces defined for all data structures (Project, Experience, Skill, etc.)
@@ -24,7 +24,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **NAV-01**: Sticky navbar with smooth-scroll anchor links to all sections
 - [ ] **NAV-02**: Mobile hamburger menu with slide-in navigation
 - [ ] **NAV-03**: Active section indicator highlights current section in navbar
-- [ ] **NAV-04**: Theme toggle (light/dark) works with system preference auto-detection
+- [x] **NAV-04**: Theme toggle (light/dark) works with system preference auto-detection
 
 ### Hero Section
 
@@ -125,14 +125,14 @@ Deferred to future release. Tracked but not in current roadmap.
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Complete |
-| FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Complete |
+| FOUND-04 | Phase 1 | Complete |
 | FOUND-05 | Phase 1 | Pending |
-| FOUND-06 | Phase 1 | Pending |
+| FOUND-06 | Phase 1 | Complete |
 | FOUND-07 | Phase 1 | Pending |
 | FOUND-08 | Phase 1 | Pending |
 | FOUND-09 | Phase 1 | Pending |
-| NAV-04 | Phase 1 | Pending |
+| NAV-04 | Phase 1 | Complete |
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |
 | HERO-03 | Phase 2 | Pending |

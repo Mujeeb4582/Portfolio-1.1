@@ -31,7 +31,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. All existing components render without visual regressions after the upgrade
   4. `constant.ts` contains all real portfolio content (projects, experience, skills, personal info) with TypeScript interfaces
   5. Dead code, placeholder content, and unused files are absent from the project
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — pnpm to bun migration + Next.js 16 + React 19 upgrade
+- [ ] 01-02-PLAN.md — Tailwind v4 migration + dark mode fix + shadcn re-init
+- [ ] 01-03-PLAN.md — ESLint flat config + Inter/JetBrains fonts + dead code cleanup
+- [ ] 01-04-PLAN.md — TypeScript interfaces (types.ts) + full constant.ts data population
 
 ### Phase 2: Core Sections
 **Goal**: Visitors can read Mujeeb's identity, expertise, and career history through fully built Hero, About, Skills, and Experience sections using real content
@@ -97,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/4 | Ready to execute | - |
 | 2. Core Sections | 0/TBD | Not started | - |
 | 3. Projects Section | 0/TBD | Not started | - |
 | 4. Navigation + Animations | 0/TBD | Not started | - |
@@ -107,3 +113,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 ---
 *Roadmap created: 2026-03-18*
 *Requirements coverage: 47/47 v1 requirements mapped*
+*Phase 1 planned: 2026-03-18 — 4 plans across 3 waves*

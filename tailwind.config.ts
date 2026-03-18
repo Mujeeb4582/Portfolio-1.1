@@ -11,8 +11,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'var(--font-geist-sans)',
-        mono: 'var(--font-geist-mono)',
         ubuntu: 'var(--font-ubuntu)',
         ibmPlexMono: 'var(--font-ibm-plex-mono)',
       },

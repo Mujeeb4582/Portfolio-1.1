@@ -221,7 +221,7 @@ CSS-only decoration above the screenshot image. No image assets.
 | Element | Specification |
 |---------|--------------|
 | Frame wrapper | `<div>` with `rounded-t-lg overflow-hidden` |
-| Browser bar | `<div className="flex h-7 items-center gap-1.5 bg-muted px-3">` |
+| Browser bar | `<div className="flex h-7 items-center gap-2 bg-muted px-3">` |
 | Traffic light dots | 3x `<span className="size-2.5 rounded-full" />` — `bg-[#FF5F56]`, `bg-[#FFBD2E]`, `bg-[#27C93F]` |
 | URL bar | `<div className="ml-2 flex-1 rounded bg-background/50 px-2 py-1 text-[10px] text-muted-foreground font-mono truncate">` — shows project title or domain placeholder |
 | Screenshot container | `<div className="relative overflow-hidden" style={{ height: '{N}px' }}>` |

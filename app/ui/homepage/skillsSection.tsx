@@ -20,8 +20,8 @@ export default function SkillsSection() {
   return (
     <div className="relative flex flex-col space-y-4 pb-16 pt-8 text-center">
       <div
-        className="absolute inset-0 bg-skills-bg bg-cover bg-center bg-no-repeat"
-        style={{ opacity: 0.1 }}
+        className="absolute inset-0 bg-skills-bg bg-cover bg-center bg-no-repeat opacity-10"
+        aria-hidden="true"
       ></div>
       <div className="flex flex-col items-center space-y-4">
         <div className="flex w-[8.875rem] flex-col items-center">

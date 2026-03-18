@@ -2,7 +2,7 @@ import { ThemeToggle } from '@/app/ui/theme/theme-toggle'
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-8 py-4 shadow-md">
+    <nav aria-label="Main navigation" className="flex items-center justify-between px-8 py-4 shadow-md">
       <div className="text-2xl font-bold">Portfolio</div>
       <div className="flex space-x-4">
         {/* <a href="#" className="">

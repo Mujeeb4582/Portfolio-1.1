@@ -1,23 +1,16 @@
+import { LANGUAGE_ICONS } from '@/app/lib/constant'
 import { Avatar, AvatarFallback, AvatarImage } from '@/app/ui/avatar'
 import { Button } from '@/app/ui/button'
 import { Card } from '@/app/ui/card'
 import {
   Briefcase,
   Download,
-  Link as LinkIcon,
   Mail,
   MapPin,
 } from 'lucide-react'
 import Link from 'next/link'
 
 export default function HeroSection() {
-  const languages = [
-    { name: 'HTML', color: 'html' },
-    { name: 'CSS', color: 'css' },
-    { name: 'JS', color: 'js' },
-    { name: 'React', color: 'react' },
-  ]
-
   const professionalMetrics = [
     { count: 4, category: 'Programming Language' },
     { count: 6, category: 'Development Tools' },
@@ -29,8 +22,8 @@ export default function HeroSection() {
       <section className="mt-16 w-full px-9">
         <div className="flex flex-col items-center rounded-br-[160px] rounded-tl-[160px] border-4 border-white p-1 font-ibmPlexMono shadow-[-4px_-4px_2px_0px_#12F7D6]">
           <Avatar className="mt-9 size-24 border-4 border-brand1">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage src="/profile.jpg" />
+            <AvatarFallback>MR</AvatarFallback>
           </Avatar>
           <h1 className="mt-4 text-logo-m">Mujeeb</h1>
           <p className="text-code-m">Full Stack Developer</p>
@@ -48,14 +41,10 @@ export default function HeroSection() {
               <span>Full-time / Freelancer</span>
             </div>
             <div className="flex items-center space-x-2">
-              <LinkIcon className="size-[14px] text-brand1" />
-              <Link href="#">www.mujeeb.com</Link>
-            </div>
-            <div className="flex items-center space-x-2">
-              {languages.map((language) => (
+              {LANGUAGE_ICONS.map((language) => (
                 <span
                   key={language.name}
-                  className={`rounded-lg bg-brand1 px-2 py-1 uppercase text-black`}
+                  className="rounded-lg bg-brand1 px-2 py-1 uppercase text-black"
                 >
                   {language.name}
                 </span>
@@ -93,7 +82,7 @@ export default function HeroSection() {
             {'<p>'}
           </span>
           <p className="ml-4 font-ibmPlexMono text-para-m">
-            I help business grow by crafting amazing web experiences. If you’re
+            I help business grow by crafting amazing web experiences. If you&apos;re
             looking for a developer that likes to get stuff done,
           </p>
           <span className="font-ibmPlexMono text-code-m text-brand2">
@@ -104,7 +93,7 @@ export default function HeroSection() {
           <span className="font-ibmPlexMono text-h2-m text-brand1">
             Let&apos;s Talk
           </span>
-          <Link href="#">
+          <Link href="mailto:mujeeburahman4582@gmail.com" aria-label="Send email to Mujeeb">
             <Mail className="h-[18px] w-[22px] text-brand1" />
           </Link>
         </div>

@@ -1,19 +1,18 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/app/ui/navbar'
-import { IBM_Plex_Mono, Ubuntu } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ClientThemeProvider } from './ui/theme/clientThemeProvider'
 
-const ubuntu = Ubuntu({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-ubuntu',
-  weight: '400',
+  variable: '--font-inter',
 })
 
-const ibmPlexMono = IBM_Plex_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-ibm-plex-mono',
-  weight: '400',
+  variable: '--font-jetbrains',
+  weight: ['400', '500', '700'],
 })
 
 export const metadata: Metadata = {
@@ -29,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${ubuntu.variable} ${ibmPlexMono.variable} antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-inter`}
       >
         <ClientThemeProvider>
           <Navbar />

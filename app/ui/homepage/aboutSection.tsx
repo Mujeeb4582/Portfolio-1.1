@@ -4,16 +4,15 @@ export default function AboutSection() {
   return (
     <section className="relative bg-card">
       <div
-        className="absolute inset-0 bg-about-bg bg-cover bg-center bg-no-repeat"
-        style={{ opacity: 0.1 }}
+        className="absolute inset-0 bg-about-bg bg-cover bg-center bg-no-repeat opacity-10"
+        aria-hidden="true"
       ></div>
       <div className="my-16 flex flex-col items-center justify-center">
         <h2 className="rounded-br-[40px] rounded-tl-[40px] border-4 border-brand1 bg-background px-10 py-4 font-ubuntu text-h2-u">
           About me
         </h2>
         <div
-          className="mx-5 mt-8 flex flex-col rounded-[40px] bg-background p-6"
-          style={{ zIndex: 1 }}
+          className="z-[1] mx-5 mt-8 flex flex-col rounded-[40px] bg-background p-6"
         >
           <span className="font-ibmPlexMono text-code-m text-brand2">
             {'<p>'}

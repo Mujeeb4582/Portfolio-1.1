@@ -34,9 +34,9 @@
   --color-input: hsl(20 5.9% 90%);
   --color-ring: hsl(20 14.3% 4.1%);
 
-  /* Font variables (placeholder until Plan 03 adds Inter/JetBrains) */
-  --font-inter: 'Inter', sans-serif;
-  --font-jetbrains: 'JetBrains Mono', monospace;
+  /* Font variables — CSS variable references injected by next/font/google */
+  --font-inter: var(--font-inter-variable), 'Inter', sans-serif;
+  --font-jetbrains: var(--font-jetbrains-variable), 'JetBrains Mono', monospace;
 
   /* Border radius */
   --radius: 0.5rem;

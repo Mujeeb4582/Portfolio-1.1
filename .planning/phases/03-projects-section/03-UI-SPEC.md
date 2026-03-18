@@ -63,18 +63,26 @@ Inherits all Phase 2 tokens. No new sizes or weights introduced.
 | `text-h2-u` | Inter | 36px | 700 (bold) | 1.2 | "Projects" section heading |
 | `text-para-m` | JetBrains Mono | 16px | 400 (regular) | 1.5 | Project description (2-3 lines), role + company |
 | `text-code-m` | JetBrains Mono | 14px | 400 (regular) | 1.5 | Tech stack pill badges |
-| `text-button-u` | Inter | 14px | 700 (bold) | 1 | Action link button labels ("Live Demo", "GitHub") |
+| `text-button-u` | Inter | 14px | 700 (bold) | 1 | Action link button labels ("Live Demo", "View on GitHub") |
 | `text-label-u-m` | Inter | 14px | 400 (regular) | 1.5 | Project type badge (Web / Mobile), role + company meta |
 
 ### Phase 3 Specific Typography Notes
 
-- Project title inside each card: Inter 20px bold (use Tailwind `text-xl font-bold`) — same card-heading tier as experience role titles; no new token needed
-- Tech stack pills: JetBrains Mono 14px regular (`text-code-m`) with `px-2 py-0.5` padding and `rounded-full` shape
-- Featured card project title: Inter 24px bold (`text-2xl font-bold`) — larger than grid card titles to reinforce featured prominence; no new token, use Tailwind utility directly
+- Project title inside ALL cards (featured and grid): Inter 20px bold (`text-xl font-bold`), `text-foreground` — same size for both. Featured card prominence is established via `border-t-2 border-t-brand1` top border and the 400px screenshot height, NOT a larger font size.
+- Tech stack pills: JetBrains Mono 14px regular (`text-code-m`) with `px-2 py-1` padding and `rounded-full` shape.
+
+### Summary Table (4 sizes, 2 weights)
+
+| Role | Size | Weight | Line Height | Font |
+|------|------|--------|-------------|------|
+| Section heading | 36px | 700 bold | 1.2 | Inter |
+| Card title | 20px | 700 bold | 1.2 | Inter |
+| Body / Description | 16px | 400 regular | 1.5 | JetBrains Mono |
+| Label / Meta / Pill | 14px | 400 regular | 1.5 | Inter / JetBrains Mono |
 
 Weights used: 400 (regular) and 700 (bold). No intermediate weights.
 
-Source: Phase 2 UI-SPEC (inherited); card title sizing from 03-CONTEXT.md pattern
+Source: Phase 2 UI-SPEC (inherited); card title sizing from 03-CONTEXT.md pattern; consolidated to 4 sizes per typography contract
 
 ---
 
@@ -107,6 +115,12 @@ Source: 03-CONTEXT.md (cyan accent for card hover), Phase 2 UI-SPEC (inherited s
 
 ---
 
+## Visual Hierarchy
+
+Primary visual anchor: the FeaturedProjectCard. Its full-width layout, 400px screenshot height, and `border-t-2 border-brand1` top border establish it as the dominant element before the grid. All grid cards use identical sizing so no single grid project competes with the featured position.
+
+---
+
 ## Component Inventory
 
 All Phase 2 components are available. Phase 3 uses:
@@ -114,7 +128,7 @@ All Phase 2 components are available. Phase 3 uses:
 | Component | Location | Used In Phase 3 |
 |-----------|----------|-----------------|
 | `Card`, `CardContent` | `app/ui/card.tsx` | All 6 project cards (featured + grid) |
-| `Button` | `app/ui/button.tsx` | Action link buttons ("Live Demo", "GitHub") |
+| `Button` | `app/ui/button.tsx` | Action link buttons ("Live Demo", "View on GitHub") |
 | `UnderLine` | `app/ui/underLine.tsx` | Section heading decoration |
 | `next/image <Image>` | next built-in | Project screenshots (lazy-load, not priority) |
 | `lucide-react` | installed | `Github` icon (GitHub link), `ExternalLink` icon (live demo link) |
@@ -134,7 +148,7 @@ New component to create:
 |-----------|----------|---------|
 | `BrowserFrame` | inline in `projectsSection.tsx` or separate `app/ui/homepage/deviceFrames.tsx` | CSS-only browser chrome decoration for web projects |
 | `PhoneFrame` | same file | CSS-only phone bezel decoration for mobile projects |
-| `ProjectCard` | inline or `app/ui/homepage/projectCard.tsx` | Single project card (reused for all 6) |
+| `ProjectCard` | inline or `app/ui/homepage/projectCard.tsx` | Single project card (reused for all 6 grid cards) |
 | `FeaturedProjectCard` | inline or same file | Featured (Buildable) full-width variant |
 | `projectsSection` | `app/ui/homepage/projectsSection.tsx` | Section root, wired into `app/page.tsx` |
 
@@ -170,7 +184,7 @@ New component to create:
 | Layout mobile | Stacked: screenshot top, content below — default column direction |
 | Screenshot area | Left half: `<BrowserFrame>` wrapping `<Image>` — height 400px desktop, 240px mobile |
 | Content area | Right half: flex column, p-6, gap-4 between elements |
-| Project title | Inter 24px bold (`text-2xl font-bold`), `text-foreground` |
+| Project title | Inter 20px bold (`text-xl font-bold`), `text-foreground` |
 | Role + company | JetBrains Mono 14px regular (`text-code-m`), `text-muted-foreground`, "{role} at {company}" |
 | Description | JetBrains Mono 16px regular (`text-para-m`), `text-foreground`, full description (no truncation — featured card has space) |
 | Tech stack pills | flex wrap, gap-sm (8px) between pills, `mt-auto` to push to bottom of content column |
@@ -209,7 +223,7 @@ CSS-only decoration above the screenshot image. No image assets.
 | Frame wrapper | `<div>` with `rounded-t-lg overflow-hidden` |
 | Browser bar | `<div className="flex h-7 items-center gap-1.5 bg-muted px-3">` |
 | Traffic light dots | 3x `<span className="size-2.5 rounded-full" />` — `bg-[#FF5F56]`, `bg-[#FFBD2E]`, `bg-[#27C93F]` |
-| URL bar | `<div className="ml-2 flex-1 rounded bg-background/50 px-2 py-0.5 text-[10px] text-muted-foreground font-mono truncate">` — shows project title or domain placeholder |
+| URL bar | `<div className="ml-2 flex-1 rounded bg-background/50 px-2 py-1 text-[10px] text-muted-foreground font-mono truncate">` — shows project title or domain placeholder |
 | Screenshot container | `<div className="relative overflow-hidden" style={{ height: '{N}px' }}>` |
 | Screenshot image | `<Image>` fill layout, `objectFit: "cover"`, `objectPosition: "top"`, `loading="lazy"` |
 
@@ -242,8 +256,9 @@ CSS-only decoration around the screenshot image. No image assets.
 
 | Element | Specification |
 |---------|--------------|
-| Pill wrapper | `<span className="font-jetbrains rounded-full bg-muted px-2 py-0.5 text-[0.8125rem] text-muted-foreground">` |
-| Font | JetBrains Mono, 13px (0.8125rem) — slightly smaller than `text-code-m` (14px) to visually compress badges |
+| Pill wrapper | `<span className="font-jetbrains rounded-full bg-muted px-2 py-1 text-code-m text-muted-foreground">` |
+| Font | JetBrains Mono, 14px (`text-code-m`) |
+| Padding | `px-2 py-1` (8px horizontal, 4px vertical) — multiples of 4 only |
 | No accent color | Pills use `bg-muted text-muted-foreground` — accent is reserved for hover states; pills must not compete with card border accent |
 | Overflow handling | `flex flex-wrap gap-2` container; pills wrap naturally — no truncation, no "+N more" pattern |
 
@@ -252,7 +267,7 @@ CSS-only decoration around the screenshot image. No image assets.
 | Link Type | When to Show | Specification |
 |-----------|-------------|--------------|
 | "Live Demo" | `liveUrl` exists in Project | `<Button variant="outline" size="sm" asChild><a href={liveUrl} target="_blank" rel="noopener noreferrer"><ExternalLink size={14} /> Live Demo</a></Button>` |
-| "GitHub" | `githubUrl` exists in Project | `<Button variant="outline" size="sm" asChild><a href={githubUrl} target="_blank" rel="noopener noreferrer"><Github size={14} /> GitHub</a></Button>` |
+| "View on GitHub" | `githubUrl` exists in Project | `<Button variant="outline" size="sm" asChild><a href={githubUrl} target="_blank" rel="noopener noreferrer"><Github size={14} /> View on GitHub</a></Button>` |
 | Neither available | both undefined | Render nothing — do not show disabled buttons; omit action links row entirely if no links |
 
 Action link presentation: icon (14px) + text label. NOT icon-only. Claude's Discretion resolved to icon+text for accessibility and clarity (03-CONTEXT.md).
@@ -265,7 +280,7 @@ Used when `screenshotPath` WebP does not exist in `public/`.
 |---------|--------------|
 | Container | `<div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-muted to-muted/50">` |
 | Initials circle | `<div className="flex size-16 items-center justify-center rounded-full border-2 border-brand1/30 bg-background">` |
-| Initials text | First letter of project title, Inter 24px bold, `text-brand1` |
+| Initials text | First letter of project title, Inter 20px bold (`text-xl font-bold`), `text-brand1` |
 | Alt awareness | This is a visual placeholder only; the surrounding `<Image>` element is replaced, not wrapped |
 
 Implementation: use `onError` on `<Image>` with a state flag to swap to placeholder — this requires `'use client'` on the card only if placeholder is interactive; alternatively render placeholder server-side when screenshotPath is known missing. For Phase 3, treat all 6 as potentially missing and implement client-side `onError` swap pattern on `ProjectCard`.
@@ -312,7 +327,7 @@ Source: 03-CONTEXT.md (2-column grid desktop, 1-column mobile)
 | Section heading | "Projects" |
 | Section heading — aria-labelledby | id="projects-heading" on the `<h2>` element |
 | Live demo button label | "Live Demo" |
-| GitHub button label | "GitHub" |
+| GitHub button label | "View on GitHub" |
 | Screenshot placeholder alt | "{project.title} — screenshot not available" |
 | Screenshot image alt | "{project.title} — {project.type === 'web' ? 'web application' : 'mobile application'} screenshot" |
 | Role + company meta | "{project.role} at {project.company}" — from PROJECTS array, no hardcoded copy |
@@ -358,13 +373,17 @@ Note: Phase 4 adds scroll-reveal animations. Phase 3 builds static structure + C
 
 6. **No `screenshotPath` validation:** Do not add runtime path checks. Rely on Next.js Image `onError` for fallback. If screenshots are absent at build time, Next.js will serve 404 for the image src — the `onError` handler triggers the placeholder.
 
-7. **Tech pill font size:** Pills use 13px (not 14px `text-code-m`) to compact badge widths. Use `text-[0.8125rem]` Tailwind arbitrary value — no new token required.
+7. **Tech pill font size:** Pills use 14px (`text-code-m`). Do NOT use `text-[0.8125rem]` (13px) — the 4-size typography contract requires consolidation at 14px.
 
 8. **No pagination/filtering:** All 6 projects render at once. No "Load More" button, no filter tabs. (ENH-03 project filtering is v2 scope — out of scope for Phase 3.)
 
 9. **External link safety:** Every `target="_blank"` link must have `rel="noopener noreferrer"`. This is a security requirement from CLAUDE.md (optimized, clean code) and a WCAG 2.2 AA consideration.
 
-10. **wiring in page.tsx:** Import `ProjectsSection` from `app/ui/homepage/projectsSection` and place it after `ExperienceSection` in `app/page.tsx`.
+10. **Wiring in page.tsx:** Import `ProjectsSection` from `app/ui/homepage/projectsSection` and place it after `ExperienceSection` in `app/page.tsx`.
+
+11. **Featured card prominence:** Featured card visual weight comes from `border-t-2 border-brand1` + 400px screenshot height + full-width layout — NOT from a larger font size. Both featured and grid card titles use `text-xl font-bold` (20px).
+
+12. **Spacing compliance:** All padding values must be multiples of 4px. `py-1` (4px) is the minimum vertical padding for pills and URL bar. Never use `py-0.5` (2px).
 
 ---
 

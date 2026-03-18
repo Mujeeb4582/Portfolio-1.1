@@ -67,8 +67,7 @@ All tokens must be added to `app/globals.css` under `@theme {}` before section c
 | `text-para-m` | JetBrains Mono | 16px | 400 (regular) | 1.5 | Body paragraphs, bios, skill names, responsibilities |
 | `text-code-m` | JetBrains Mono | 14px | 400 (regular) | 1.5 | Code tag decoration, meta text, date ranges |
 | `text-button-u` | Inter | 14px | 700 (bold) | 1 | Button labels |
-| `text-label-u-m` | Inter | 12px | 400 (regular) | 1.5 | Stat card sub-labels, category labels |
-| `text-logo-m` | JetBrains Mono | 24px | 700 (bold) | 1.2 | Logo/name display (carry-forward, used in hero) |
+| `text-label-u-m` | Inter | 14px | 400 (regular) | 1.5 | Stat card sub-labels, category labels |
 
 ### Summary Table (4 sizes, 2 weights)
 
@@ -77,11 +76,14 @@ All tokens must be added to `app/globals.css` under `@theme {}` before section c
 | Display / Heading | 36px | 700 bold | 1.2 | Inter |
 | Sub-heading / Accent | 28px | 700 bold | 1.2 | JetBrains Mono |
 | Body / Paragraph | 16px | 400 regular | 1.5 | JetBrains Mono |
-| Label / Meta | 14px | 400 regular | 1.5 | JetBrains Mono |
+| Label / Meta | 14px | 400 regular | 1.5 | Inter / JetBrains Mono |
 
 Weights used: 400 (regular) and 700 (bold). No intermediate weights.
 
-Note: `text-button-u` at 14px / 700 bold is the Inter label size — used exclusively on button labels. The semantic distinction from body text is font family (Inter vs JetBrains Mono) and weight (700 vs 400).
+Notes:
+- `text-button-u` at 14px / 700 bold (Inter) and `text-label-u-m` at 14px / 400 regular (Inter) share the same size tier. The semantic distinction is weight (700 vs 400) and context (button label vs stat sub-label).
+- `text-code-m` at 14px / 400 regular (JetBrains Mono) also shares the 14px tier. The semantic distinction from `text-label-u-m` is font family (JetBrains Mono vs Inter) — mono for code/date ranges, Inter for UI labels.
+- `text-logo-m` (24px, JetBrains Mono) is a Phase 1 carry-forward token used in the navbar logo. It is NOT part of the Phase 2 typography contract and must NOT be added in Phase 2 `@theme {}` additions.
 
 Source: `app/ui/homepage/heroSection.tsx` token usage, `.planning/codebase/STACK.md` font token documentation, defaults applied for pixel values
 
@@ -154,6 +156,8 @@ Components to AVOID in Phase 2:
 
 Layout: Two-column flex on desktop (`md:flex-row`), stacked on mobile (column-first).
 
+Primary focal point: hero name (`<h1>`) and photo glow — the eye anchors on the name first (large 36px bold Inter), then the cyan-bordered portrait on the right.
+
 | Element | Specification |
 |---------|--------------|
 | Section wrapper | `<section id="hero" aria-labelledby="hero-name">` min-height: screen, max-width: 6xl, px-6 py-20 |
@@ -186,7 +190,7 @@ Layout: Two-column on desktop (bio left 60%, stats right 40%), stacked on mobile
 | Stats grid | 3 columns, gap-16px: "Years Experience", "Projects Completed", "Technologies" |
 | Stat card | `rounded-lg border border-brand1/30 bg-card p-4 flex flex-col items-center` |
 | Stat number | JetBrains Mono 28px bold, `text-brand1`, value + "+" suffix |
-| Stat label | Inter 12px regular, `text-muted-foreground`, centered |
+| Stat label | Inter 14px regular, `text-muted-foreground`, centered |
 | No photo | No `<Image>` or avatar in this section — photo is in Hero only |
 | Mobile adaptation | Bio stacks above stats grid; stats grid collapses to 3 columns (still fits on mobile at 3 col) |
 
@@ -201,7 +205,7 @@ Layout: Grid of category cards — 3 columns desktop, 2 columns tablet (md), 1 c
 | Category card | shadcn `<Card>` with `p-6`, `border border-border` default |
 | Category heading | Inter 14px bold (button-u weight), `text-foreground`, card header |
 | Icon grid | CSS grid, 3 columns inside each card, gap-8px |
-| Skill item | flex column, icon centered, name below — icon `size-8` (32px), name JetBrains Mono 12px `text-muted-foreground` |
+| Skill item | flex column, icon centered, name below — icon `size-8` (32px), name JetBrains Mono 14px `text-muted-foreground` |
 | Icon color | `text-brand1` as default; for colored brand icons use native brand color where available |
 | No-icon fallback | Skill name rendered text-only with a 32px `rounded-sm bg-muted` placeholder square |
 | Categories | Frontend, Backend, Mobile, LLM/AI, Tools — 5 cards total |
@@ -300,19 +304,18 @@ Source: 02-RESEARCH.md (react-icons analysis), components.json
 
 ## Implementation Notes for Executor
 
-1. **Typography token gap:** The tokens `text-h2-u`, `text-para-m`, `text-number-m`, `text-code-m`, `text-h2-m`, `text-logo-m`, `text-button-u`, `text-label-u-m` are USED in existing components but NOT defined in `app/globals.css`. Add these to the `@theme {}` block before building sections.
+1. **Typography token gap:** The tokens `text-h2-u`, `text-para-m`, `text-number-m`, `text-code-m`, `text-h2-m`, `text-button-u`, `text-label-u-m` are USED in existing components but NOT defined in `app/globals.css`. Add these to the `@theme {}` block before building sections. Do NOT add `--font-size-logo-m` — that token is Phase 1 scope only.
 
    ```css
    @theme {
-     /* Typography scale additions */
+     /* Typography scale additions — Phase 2 */
      --font-size-h2-u: 2.25rem;      /* 36px */
      --font-size-h2-m: 1.75rem;      /* 28px */
      --font-size-number-m: 1.75rem;  /* 28px */
-     --font-size-logo-m: 1.5rem;     /* 24px */
      --font-size-para-m: 1rem;       /* 16px */
      --font-size-code-m: 0.875rem;   /* 14px */
      --font-size-button-u: 0.875rem; /* 14px */
-     --font-size-label-u-m: 0.75rem; /* 12px */
+     --font-size-label-u-m: 0.875rem; /* 14px — merged from 12px to stay within 4-size system */
    }
    ```
 
@@ -329,6 +332,8 @@ Source: 02-RESEARCH.md (react-icons analysis), components.json
 7. **Primary CTA button color:** The shadcn default `bg-primary` in midnight_steel resolves to near-white. For the hero primary button to use brand cyan (`#12F7D6`) as background, apply `className="bg-brand1 text-black hover:bg-brand1/90"` to override the default. This is the intentional design for the accent-colored primary action.
 
 8. **Button label weight:** `text-button-u` uses weight 700 (bold), matching the two-weight system (400 regular + 700 bold). Do not use `font-semibold` (600) for button labels — use `font-bold` (700).
+
+9. **Stat label token:** The About section stat labels use `text-label-u-m` which is now 14px / 400 regular (Inter). The RESEARCH.md code example references `font-inter text-label-u-m` — this is correct and unchanged in intent; only the size was bumped from 12px to 14px.
 
 ---
 

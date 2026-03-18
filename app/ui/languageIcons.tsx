@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface LanguageIconsProps {
-  icon: JSX.Element | React.FC<object>
+  icon: React.ReactElement | React.FC<object>
   iconName: string
   iconColor: string
 }

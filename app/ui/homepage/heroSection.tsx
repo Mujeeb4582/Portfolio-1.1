@@ -1,122 +1,115 @@
-import { LANGUAGE_ICONS } from '@/app/lib/constant'
-import { Avatar, AvatarFallback, AvatarImage } from '@/app/ui/avatar'
+// heroSection.tsx — rebuilt for Phase 2 split layout design
+// Profile photo: /profile.jpg (placeholder until real photo provided — copy of aboutImage.png)
+import { PERSONAL_INFO } from '@/app/lib/constant'
 import { Button } from '@/app/ui/button'
-import { Card } from '@/app/ui/card'
-import {
-  Briefcase,
-  Download,
-  Mail,
-  MapPin,
-} from 'lucide-react'
+import { Download, Github, Linkedin, Mail, MessageCircle } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
+const SOCIAL_LINKS = [
+  {
+    icon: Github,
+    href: PERSONAL_INFO.github,
+    label: 'GitHub profile',
+    external: true,
+  },
+  {
+    icon: Linkedin,
+    href: PERSONAL_INFO.linkedIn,
+    label: 'LinkedIn profile',
+    external: true,
+  },
+  {
+    icon: Mail,
+    href: `mailto:${PERSONAL_INFO.email}`,
+    label: 'Send email',
+    external: false,
+  },
+  {
+    icon: MessageCircle,
+    href: `https://wa.me/${PERSONAL_INFO.whatsApp.replace(/\D/g, '')}`,
+    label: 'Contact on WhatsApp',
+    external: true,
+  },
+] as const
+
 export default function HeroSection() {
-  const professionalMetrics = [
-    { count: 4, category: 'Programming Language' },
-    { count: 6, category: 'Development Tools' },
-    { count: 4, category: 'Years of Experience' },
-  ]
-
   return (
-    <div>
-      <section className="mt-16 w-full px-9">
-        <div className="flex flex-col items-center rounded-br-[160px] rounded-tl-[160px] border-4 border-white p-1 font-jetbrains shadow-[-4px_-4px_2px_0px_#12F7D6]">
-          <Avatar className="mt-9 size-24 border-4 border-brand1">
-            <AvatarImage src="/profile.jpg" />
-            <AvatarFallback>MR</AvatarFallback>
-          </Avatar>
-          <h1 className="mt-4 text-logo-m">Mujeeb</h1>
-          <p className="text-code-m">Full Stack Developer</p>
-          <div className="mt-8 flex flex-col space-y-4 text-code-m">
-            <div className="flex items-center space-x-2">
-              <Mail className="size-[14px] text-brand1" />
-              <span>mujeeburahman4582@gmail.com</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="size-[14px] text-brand1" />
-              <span>Pakistan</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Briefcase className="size-[14px] text-brand1" />
-              <span>Full-time / Freelancer</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              {LANGUAGE_ICONS.map((language) => (
-                <span
-                  key={language.name}
-                  className="rounded-lg bg-brand1 px-2 py-1 uppercase text-black"
-                >
-                  {language.name}
-                </span>
-              ))}
-            </div>
-            <div className="">
-              <Button
-                variant="default"
-                className="mb-9 mt-5 flex items-center gap-4 rounded-3xl px-8 py-4 font-inter !text-button-u"
-              >
-                <span>Download CV</span>
-                <Download />{' '}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section
+      id="hero"
+      aria-labelledby="hero-name"
+      className="flex min-h-screen w-full max-w-6xl flex-col items-center gap-12 px-6 py-20 md:flex-row md:items-center md:justify-between"
+    >
+      {/* Left: text content */}
+      <div className="flex flex-col gap-6">
+        <p className="font-jetbrains text-code-m text-brand1">Hi, my name is</p>
 
-      <section className="mt-16 w-full px-9">
         <div>
-          <span className="font-jetbrains text-code-m text-brand2">
-            {'<h1>'}
-          </span>
-          <h2 className="ml-4 font-inter text-h2-u">
-            Hey <br /> I&apos;m <span className="text-brand1">Mujeeb</span>
-            <br />
-            Full-stack developer
+          <h1
+            id="hero-name"
+            className="font-inter text-h2-u font-bold text-foreground"
+          >
+            {PERSONAL_INFO.name}
+          </h1>
+          <h2 className="font-inter text-h2-u font-bold text-muted-foreground">
+            {PERSONAL_INFO.title}
           </h2>
-          <span className="font-jetbrains text-code-m text-brand2">
-            {'</h1>'}
-          </span>
         </div>
-        <div className="mt-9">
-          <span className="font-jetbrains text-code-m text-brand2">
-            {'<p>'}
-          </span>
-          <p className="ml-4 font-jetbrains text-para-m">
-            I help business grow by crafting amazing web experiences. If you&apos;re
-            looking for a developer that likes to get stuff done,
-          </p>
-          <span className="font-jetbrains text-code-m text-brand2">
-            {'</p>'}
-          </span>
+
+        <p className="max-w-md font-jetbrains text-para-m text-muted-foreground">
+          {PERSONAL_INFO.bio}
+        </p>
+
+        {/* CTA row */}
+        <div className="flex flex-wrap gap-4">
+          <Button
+            asChild
+            className="bg-brand1 font-inter text-button-u font-bold text-black hover:bg-brand1/90"
+          >
+            <Link href="#contact">Contact Me</Link>
+          </Button>
+
+          <Button
+            variant="outline"
+            asChild
+            className="font-inter text-button-u font-bold"
+          >
+            <a href="/mujeeb-resume.pdf" download="Mujeeb-ur-Rahman-CV.pdf">
+              <Download className="mr-2 size-4" />
+              Download CV
+            </a>
+          </Button>
         </div>
-        <div className="mt-4 flex items-center justify-center gap-4">
-          <span className="font-jetbrains text-h2-m text-brand1">
-            Let&apos;s Talk
-          </span>
-          <Link href="mailto:mujeeburahman4582@gmail.com" aria-label="Send email to Mujeeb">
-            <Mail className="h-[18px] w-[22px] text-brand1" />
-          </Link>
+
+        {/* Social links row */}
+        <div className="flex gap-2">
+          {SOCIAL_LINKS.map(({ icon: Icon, href, label, external }) => (
+            <Link
+              key={label}
+              href={href}
+              aria-label={label}
+              {...(external
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+              className="p-2.5 text-muted-foreground transition-colors duration-200 hover:text-brand1"
+            >
+              <Icon className="size-5" aria-hidden="true" />
+            </Link>
+          ))}
         </div>
-        <div className="flex w-full justify-center">
-          <Card className="my-16 h-[378px] w-[215px] rounded-[80px]">
-            <div className="flex flex-col space-y-12 px-8 py-12">
-              {professionalMetrics.map((metric) => (
-                <div
-                  key={metric.category}
-                  className="flex items-center justify-center gap-4"
-                >
-                  <span className="font-jetbrains text-number-m text-brand1">
-                    {metric.count}
-                  </span>
-                  <span className="font-jetbrains text-para-m">
-                    {metric.category}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Card>
-        </div>
-      </section>
-    </div>
+      </div>
+
+      {/* Right: professional photo */}
+      <div className="relative shrink-0 overflow-hidden rounded-2xl border-2 border-brand1 shadow-[0_0_24px_rgba(18,247,214,0.25)]">
+        <Image
+          src="/profile.jpg"
+          alt="Mujeeb ur Rahman — Full-Stack Web Developer"
+          width={380}
+          height={460}
+          className="object-cover"
+          priority
+        />
+      </div>
+    </section>
   )
 }

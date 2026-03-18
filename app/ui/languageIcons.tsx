@@ -17,7 +17,7 @@ export const LanguageIcons: React.FC<LanguageIconsProps> = ({
         {typeof icon === 'function' ? React.createElement(icon) : icon}
       </div>
       <div
-        className={`font-ibmPlexMono text-h2-m`}
+        className={`font-jetbrains text-h2-m`}
         style={{
           color: iconColor,
         }}

@@ -8,21 +8,21 @@ export default function AboutSection() {
         aria-hidden="true"
       ></div>
       <div className="my-16 flex flex-col items-center justify-center">
-        <h2 className="rounded-br-[40px] rounded-tl-[40px] border-4 border-brand1 bg-background px-10 py-4 font-ubuntu text-h2-u">
+        <h2 className="rounded-br-[40px] rounded-tl-[40px] border-4 border-brand1 bg-background px-10 py-4 font-inter text-h2-u">
           About me
         </h2>
         <div
           className="z-[1] mx-5 mt-8 flex flex-col rounded-[40px] bg-background p-6"
         >
-          <span className="font-ibmPlexMono text-code-m text-brand2">
+          <span className="font-jetbrains text-code-m text-brand2">
             {'<p>'}
           </span>
           <br />
-          <span className="font-ibmPlexMono text-logo-m text-brand1">
+          <span className="font-jetbrains text-logo-m text-brand1">
             Hello!
           </span>
           <br />
-          <p className="font-ibmPlexMono text-para-m">
+          <p className="font-jetbrains text-para-m">
             My name is Mujeeb and I specialize in web development that utilizes
             HTML, CSS, JS, and REACT etc. <br />
             <br />I am a highly motivated individual and eternal optimist
@@ -34,7 +34,7 @@ export default function AboutSection() {
             that I see the world through new eyes.
           </p>
           <br />
-          <span className="font-ibmPlexMono text-code-m text-brand2">
+          <span className="font-jetbrains text-code-m text-brand2">
             {'<p>'}
           </span>
         </div>

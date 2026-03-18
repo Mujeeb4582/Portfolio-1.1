@@ -20,7 +20,7 @@ export default function HeroSection() {
   return (
     <div>
       <section className="mt-16 w-full px-9">
-        <div className="flex flex-col items-center rounded-br-[160px] rounded-tl-[160px] border-4 border-white p-1 font-ibmPlexMono shadow-[-4px_-4px_2px_0px_#12F7D6]">
+        <div className="flex flex-col items-center rounded-br-[160px] rounded-tl-[160px] border-4 border-white p-1 font-jetbrains shadow-[-4px_-4px_2px_0px_#12F7D6]">
           <Avatar className="mt-9 size-24 border-4 border-brand1">
             <AvatarImage src="/profile.jpg" />
             <AvatarFallback>MR</AvatarFallback>
@@ -53,7 +53,7 @@ export default function HeroSection() {
             <div className="">
               <Button
                 variant="default"
-                className="mb-9 mt-5 flex items-center gap-4 rounded-3xl px-8 py-4 font-ubuntu !text-button-u"
+                className="mb-9 mt-5 flex items-center gap-4 rounded-3xl px-8 py-4 font-inter !text-button-u"
               >
                 <span>Download CV</span>
                 <Download />{' '}
@@ -65,32 +65,32 @@ export default function HeroSection() {
 
       <section className="mt-16 w-full px-9">
         <div>
-          <span className="font-ibmPlexMono text-code-m text-brand2">
+          <span className="font-jetbrains text-code-m text-brand2">
             {'<h1>'}
           </span>
-          <h2 className="ml-4 font-ubuntu text-h2-u">
+          <h2 className="ml-4 font-inter text-h2-u">
             Hey <br /> I&apos;m <span className="text-brand1">Mujeeb</span>
             <br />
             Full-stack developer
           </h2>
-          <span className="font-ibmPlexMono text-code-m text-brand2">
+          <span className="font-jetbrains text-code-m text-brand2">
             {'</h1>'}
           </span>
         </div>
         <div className="mt-9">
-          <span className="font-ibmPlexMono text-code-m text-brand2">
+          <span className="font-jetbrains text-code-m text-brand2">
             {'<p>'}
           </span>
-          <p className="ml-4 font-ibmPlexMono text-para-m">
+          <p className="ml-4 font-jetbrains text-para-m">
             I help business grow by crafting amazing web experiences. If you&apos;re
             looking for a developer that likes to get stuff done,
           </p>
-          <span className="font-ibmPlexMono text-code-m text-brand2">
+          <span className="font-jetbrains text-code-m text-brand2">
             {'</p>'}
           </span>
         </div>
         <div className="mt-4 flex items-center justify-center gap-4">
-          <span className="font-ibmPlexMono text-h2-m text-brand1">
+          <span className="font-jetbrains text-h2-m text-brand1">
             Let&apos;s Talk
           </span>
           <Link href="mailto:mujeeburahman4582@gmail.com" aria-label="Send email to Mujeeb">
@@ -105,10 +105,10 @@ export default function HeroSection() {
                   key={metric.category}
                   className="flex items-center justify-center gap-4"
                 >
-                  <span className="font-ibmPlexMono text-number-m text-brand1">
+                  <span className="font-jetbrains text-number-m text-brand1">
                     {metric.count}
                   </span>
-                  <span className="font-ibmPlexMono text-para-m">
+                  <span className="font-jetbrains text-para-m">
                     {metric.category}
                   </span>
                 </div>

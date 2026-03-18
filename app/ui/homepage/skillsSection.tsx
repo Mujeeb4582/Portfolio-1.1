@@ -25,22 +25,22 @@ export default function SkillsSection() {
       ></div>
       <div className="flex flex-col items-center space-y-4">
         <div className="flex w-[8.875rem] flex-col items-center">
-          <h3 className="text-center font-ubuntu text-h1-u text-brand1">
+          <h3 className="text-center font-inter text-h1-u text-brand1">
             Skills
           </h3>
           <UnderLine />
         </div>
-        <p className="w-[21.375rem] font-ibmPlexMono text-para-m">
+        <p className="w-[21.375rem] font-jetbrains text-para-m">
           I am striving to never stop learning and improving
         </p>
       </div>
       <div className="flex flex-col items-center space-y-8">
         {skillsByCategory.map((group) => (
           <div key={group.category} className="flex h-auto w-72 flex-col items-center space-y-2 rounded-lg bg-brand2 px-6 py-4 text-bg1">
-            <div className="font-ibmPlexMono text-menu-m">{group.category}</div>
+            <div className="font-jetbrains text-menu-m">{group.category}</div>
             <div className="flex flex-wrap justify-center gap-1">
               {group.skills.map((skill) => (
-                <span key={skill.name} className="font-ibmPlexMono text-para-m text-grey">
+                <span key={skill.name} className="font-jetbrains text-para-m text-grey">
                   {skill.name}
                 </span>
               ))}

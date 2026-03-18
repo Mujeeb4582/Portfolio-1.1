@@ -49,7 +49,14 @@ Plans:
   3. Skills section displays all technologies organized by category (Frontend, Backend, Mobile, LLM/AI, Tools) with icons
   4. Experience timeline shows all four roles (Wonder Crafts, Techiosis, RGX Labs, Microverse) plus education in chronological order with dates and responsibilities
   5. About section shows real bio, key stats, and professional photo
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Prerequisites: typography tokens, test scaffold (vitest), react-icons install, placeholder PDF
+- [ ] 02-02-PLAN.md — Hero section rebuild: split layout, photo, CTAs, social links (HERO-01 to HERO-05)
+- [ ] 02-03-PLAN.md — About section rebuild: bio text, stats grid, no duplicate photo (ABOUT-01 to ABOUT-03)
+- [ ] 02-04-PLAN.md — Skills section rebuild: category cards with react-icons/si brand icons (SKILL-01 to SKILL-03)
+- [ ] 02-05-PLAN.md — Experience section + page wiring + visual checkpoint (EXP-01 to EXP-04)
 
 ### Phase 3: Projects Section
 **Goal**: Visitors can browse all 6 featured projects and understand what each one does, what tech was used, and how to see it live or in source
@@ -104,7 +111,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-03-18 |
-| 2. Core Sections | 0/TBD | Not started | - |
+| 2. Core Sections | 0/5 | Not started | - |
 | 3. Projects Section | 0/TBD | Not started | - |
 | 4. Navigation + Animations | 0/TBD | Not started | - |
 | 5. Contact Form | 0/TBD | Not started | - |
@@ -114,3 +121,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 *Roadmap created: 2026-03-18*
 *Requirements coverage: 47/47 v1 requirements mapped*
 *Phase 1 planned: 2026-03-18 — 4 plans across 3 waves*
+*Phase 2 planned: 2026-03-18 — 5 plans across 3 waves*

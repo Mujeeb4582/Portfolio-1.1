@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-core-sections-01-PLAN.md
-last_updated: "2026-03-18T17:10:03.045Z"
+stopped_at: Completed 02-core-sections-02-PLAN.md
+last_updated: "2026-03-18T17:15:14.299Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
   completed_phases: 1
   total_plans: 10
-  completed_plans: 6
+  completed_plans: 7
   percent: 0
 ---
 
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation P03 | 4 | 2 tasks | 9 files |
 | Phase 01-foundation P05 | 525656 | 1 tasks | 5 files |
 | Phase 02-core-sections P01 | 4 | 2 tasks | 9 files |
+| Phase 02-core-sections P02 | 8 | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Chose font class replacement (Option 2) over dummy shim tokens (Option 1) — eliminates all orphaned font-ubuntu/ibmPlexMono references, aligns with Phase 1 Tailwind v4 migration intent
 - [Phase 02-core-sections]: Excluded tests/ from main tsconfig, created tsconfig.test.json — keeps pre-commit tsc clean while RED-phase tests reference non-existent components
 - [Phase 02-core-sections]: react-icons installed as production dependency (not devDep) — used at runtime in Skills section components
+- [Phase 02-core-sections]: heroSection.tsx: used native anchor with download attribute inside Button asChild for CV download — avoids JS, works without hydration
+- [Phase 02-core-sections]: heroSection.tsx: SOCIAL_LINKS defined at module scope (not inside component) — computed once at module load, not per render
 
 ### Pending Todos
 
@@ -94,6 +97,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T17:10:03.043Z
-Stopped at: Completed 02-core-sections-01-PLAN.md
+Last session: 2026-03-18T17:15:14.298Z
+Stopped at: Completed 02-core-sections-02-PLAN.md
 Resume file: None

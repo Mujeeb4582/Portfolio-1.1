@@ -1,7 +1,78 @@
-import { LANGUAGE_ICONS, SKILLS } from '@/app/lib/constant'
+// skillsSection.tsx — rebuilt for Phase 2
+// Brand icons via react-icons/si (tree-shaken named imports only)
+// Skills with no SI icon render text-only with a placeholder square
+import { SKILLS } from '@/app/lib/constant'
 import type { SkillCategory } from '@/app/lib/types'
-import { LanguageIcons } from '@/app/ui/languageIcons'
+import { Card } from '@/app/ui/card'
 import { UnderLine } from '@/app/ui/underLine'
+import {
+  SiBootstrap,
+  SiCss,
+  SiCypress,
+  SiDocker,
+  SiExpress,
+  SiFirebase,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiNetlify,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiOpenai,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiRedux,
+  SiRuby,
+  SiRubyonrails,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+} from 'react-icons/si'
+import type { IconType } from 'react-icons'
+
+// Static icon map keyed by exact skill name from constant.ts
+// Skills not listed here render text-only (graceful fallback)
+const SKILL_ICON_MAP: Partial<Record<string, IconType>> = {
+  'React': SiReact,
+  'Next.js': SiNextdotjs,
+  'TypeScript': SiTypescript,
+  'JavaScript': SiJavascript,
+  'HTML5': SiHtml5,
+  'CSS3': SiCss, // SiCss3 not in v5.6.0; SiCss is the correct export
+  'TailwindCSS': SiTailwindcss,
+  'Redux': SiRedux,
+  'Bootstrap': SiBootstrap,
+  // shadcn/ui — no SI icon; text-only fallback
+  // Ant Design — no SI icon; text-only fallback
+  'Node.js': SiNodedotjs,
+  'PostgreSQL': SiPostgresql,
+  'Ruby on Rails': SiRubyonrails,
+  'Express.js': SiExpress,
+  'Supabase': SiSupabase,
+  'Firebase': SiFirebase,
+  'MySQL': SiMysql,
+  'MongoDB': SiMongodb,
+  'Python': SiPython,
+  // AWS — no SI icon in v5.6.0; text-only fallback
+  'Ruby': SiRuby,
+  'React Native': SiReact, // no dedicated RN icon in SI
+  'OpenAI API': SiOpenai,
+  // Gemini API — no SI icon; text-only fallback
+  // LiteLLM — no SI icon; text-only fallback
+  // Langfuse — no SI icon; text-only fallback
+  // Prompt Engineering — no SI icon; text-only fallback
+  'Git': SiGit,
+  'GitHub': SiGithub,
+  'Docker': SiDocker,
+  'Cypress': SiCypress,
+  // TDD — no SI icon; text-only fallback
+  // Render — no SI icon; text-only fallback
+  'Netlify': SiNetlify,
+}
 
 const CATEGORY_ORDER: SkillCategory[] = [
   'Frontend',
@@ -18,47 +89,60 @@ export default function SkillsSection() {
   })).filter((group) => group.skills.length > 0)
 
   return (
-    <div className="relative flex flex-col space-y-4 pb-16 pt-8 text-center">
-      <div
-        className="absolute inset-0 bg-skills-bg bg-cover bg-center bg-no-repeat opacity-10"
-        aria-hidden="true"
-      ></div>
-      <div className="flex flex-col items-center space-y-4">
-        <div className="flex w-[8.875rem] flex-col items-center">
-          <h3 className="text-center font-inter text-h1-u text-brand1">
-            Skills
-          </h3>
-          <UnderLine />
-        </div>
-        <p className="w-[21.375rem] font-jetbrains text-para-m">
-          I am striving to never stop learning and improving
-        </p>
+    <section
+      id="skills"
+      aria-labelledby="skills-heading"
+      className="w-full max-w-6xl px-6 py-12"
+    >
+      {/* Section heading */}
+      <div className="mb-12 flex flex-col items-center gap-3 text-center">
+        <h2
+          id="skills-heading"
+          className="font-inter text-h2-u font-bold text-foreground"
+        >
+          Skills
+        </h2>
+        <UnderLine />
       </div>
-      <div className="flex flex-col items-center space-y-8">
-        {skillsByCategory.map((group) => (
-          <div key={group.category} className="flex h-auto w-72 flex-col items-center space-y-2 rounded-lg bg-brand2 px-6 py-4 text-bg1">
-            <div className="font-jetbrains text-menu-m">{group.category}</div>
-            <div className="flex flex-wrap justify-center gap-1">
-              {group.skills.map((skill) => (
-                <span key={skill.name} className="font-jetbrains text-para-m text-grey">
-                  {skill.name}
-                </span>
-              ))}
+
+      {/* Category card grid: 1 col mobile, 2 col tablet, 3 col desktop */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {skillsByCategory.map(({ category, skills }) => (
+          <Card key={category} className="p-6">
+            <h3 className="mb-4 font-inter text-button-u font-bold text-foreground">
+              {category}
+            </h3>
+
+            {/* Skill icon grid: 3 columns inside each card */}
+            <div className="grid grid-cols-3 gap-2">
+              {skills.map((skill) => {
+                const Icon = SKILL_ICON_MAP[skill.name]
+                return (
+                  <div
+                    key={skill.name}
+                    className="flex flex-col items-center gap-1"
+                  >
+                    {Icon ? (
+                      <Icon
+                        className="size-8 text-brand1"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <div
+                        className="size-8 rounded-sm bg-muted"
+                        aria-hidden="true"
+                      />
+                    )}
+                    <span className="text-center font-jetbrains text-code-m text-muted-foreground">
+                      {skill.name}
+                    </span>
+                  </div>
+                )
+              })}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
-      <div className="grid grid-cols-2 justify-center gap-4 pt-20">
-        {LANGUAGE_ICONS &&
-          LANGUAGE_ICONS.map((item) => (
-            <LanguageIcons
-              key={item.name}
-              icon={item.icon}
-              iconName={item.name}
-              iconColor={item.color}
-            />
-          ))}
-      </div>
-    </div>
+    </section>
   )
 }

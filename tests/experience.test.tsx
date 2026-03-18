@@ -7,14 +7,14 @@ describe('ExperienceSection', () => {
     expect(screen.getByText('Wonder Crafts')).toBeInTheDocument()
     expect(screen.getByText('Techiosis')).toBeInTheDocument()
     expect(screen.getByText('RGX Labs')).toBeInTheDocument()
-    expect(screen.getByText(/Microverse/)).toBeInTheDocument()
+    expect(screen.getAllByText(/Microverse/).length).toBeGreaterThan(0)
   })
 
   it('EXP-02: each entry renders role, company, and date range', () => {
     render(<ExperienceSection />)
     expect(screen.getByText('Full-Stack Web Developer')).toBeInTheDocument()
     expect(screen.getByText('May 2023 – Present')).toBeInTheDocument()
-    expect(screen.getByText('React Native Developer')).toBeInTheDocument()
+    expect(screen.getAllByText('React Native Developer').length).toBeGreaterThan(0)
     expect(screen.getByText('May 2025 – Dec 2025')).toBeInTheDocument()
   })
 

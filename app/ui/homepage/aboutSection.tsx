@@ -1,51 +1,67 @@
-import Image from 'next/image'
+// aboutSection.tsx — rebuilt for Phase 2
+// Layout: Two-column on desktop (bio left / stats right), stacked on mobile
+// No photo — hero already shows the portrait
+import { PERSONAL_INFO } from '@/app/lib/constant'
+import { Card } from '@/app/ui/card'
+import { UnderLine } from '@/app/ui/underLine'
+
+const STATS = [
+  {
+    value: PERSONAL_INFO.stats.yearsExperience,
+    label: 'Years Experience',
+  },
+  {
+    value: PERSONAL_INFO.stats.projectsCompleted,
+    label: 'Projects Completed',
+  },
+  {
+    value: PERSONAL_INFO.stats.technologiesUsed,
+    label: 'Technologies',
+  },
+] as const
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-card">
-      <div
-        className="absolute inset-0 bg-about-bg bg-cover bg-center bg-no-repeat opacity-10"
-        aria-hidden="true"
-      ></div>
-      <div className="my-16 flex flex-col items-center justify-center">
-        <h2 className="rounded-br-[40px] rounded-tl-[40px] border-4 border-brand1 bg-background px-10 py-4 font-inter text-h2-u">
-          About me
-        </h2>
-        <div
-          className="z-[1] mx-5 mt-8 flex flex-col rounded-[40px] bg-background p-6"
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="w-full max-w-6xl px-6 py-12"
+    >
+      {/* Section heading */}
+      <div className="mb-12 flex flex-col items-center gap-3 text-center">
+        <h2
+          id="about-heading"
+          className="font-inter text-h2-u font-bold text-foreground"
         >
-          <span className="font-jetbrains text-code-m text-brand2">
-            {'<p>'}
-          </span>
-          <br />
-          <span className="font-jetbrains text-logo-m text-brand1">
-            Hello!
-          </span>
-          <br />
-          <p className="font-jetbrains text-para-m">
-            My name is Mujeeb and I specialize in web development that utilizes
-            HTML, CSS, JS, and REACT etc. <br />
-            <br />I am a highly motivated individual and eternal optimist
-            dedicated to writing clear, concise, robust code that works.
-            Striving to never stop learning and improving. <br />
-            <br /> When I&apos;m not coding, I am writing blogs, reading, or
-            picking up some new hands-on art project like photography. <br />
-            <br />I like to have my perspective and belief systems challenged so
-            that I see the world through new eyes.
+          About Me
+        </h2>
+        <UnderLine />
+      </div>
+
+      {/* Content: bio left, stats right on desktop */}
+      <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+        {/* Bio */}
+        <div className="lg:flex-[3]">
+          <p className="font-jetbrains text-para-m leading-relaxed text-foreground">
+            {PERSONAL_INFO.bio}
           </p>
-          <br />
-          <span className="font-jetbrains text-code-m text-brand2">
-            {'<p>'}
-          </span>
         </div>
-        <div className="relative z-10">
-          <Image
-            src="/aboutImage.png"
-            alt="About Image"
-            width={400}
-            height={400}
-            className="mt-8"
-          />
+
+        {/* Stats grid */}
+        <div className="grid grid-cols-3 gap-4 lg:flex-[2]">
+          {STATS.map(({ value, label }) => (
+            <Card
+              key={label}
+              className="flex flex-col items-center border border-brand1/30 bg-card p-4"
+            >
+              <span className="font-jetbrains text-number-m font-bold text-brand1">
+                {value}+
+              </span>
+              <span className="mt-1 text-center font-inter text-label-u-m text-muted-foreground">
+                {label}
+              </span>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

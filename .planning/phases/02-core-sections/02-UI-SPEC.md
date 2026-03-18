@@ -66,7 +66,7 @@ All tokens must be added to `app/globals.css` under `@theme {}` before section c
 | `text-number-m` | JetBrains Mono | 28px | 700 (bold) | 1.2 | Stat numbers in hero and about |
 | `text-para-m` | JetBrains Mono | 16px | 400 (regular) | 1.5 | Body paragraphs, bios, skill names, responsibilities |
 | `text-code-m` | JetBrains Mono | 14px | 400 (regular) | 1.5 | Code tag decoration, meta text, date ranges |
-| `text-button-u` | Inter | 14px | 600 (semibold) | 1 | Button labels |
+| `text-button-u` | Inter | 14px | 700 (bold) | 1 | Button labels |
 | `text-label-u-m` | Inter | 12px | 400 (regular) | 1.5 | Stat card sub-labels, category labels |
 | `text-logo-m` | JetBrains Mono | 24px | 700 (bold) | 1.2 | Logo/name display (carry-forward, used in hero) |
 
@@ -81,7 +81,7 @@ All tokens must be added to `app/globals.css` under `@theme {}` before section c
 
 Weights used: 400 (regular) and 700 (bold). No intermediate weights.
 
-Note: `text-button-u` at 14px / 600 semibold is the only Inter body size — used exclusively on button labels. The semantic distinction is font family (Inter vs JetBrains Mono), not additional weight values.
+Note: `text-button-u` at 14px / 700 bold is the Inter label size — used exclusively on button labels. The semantic distinction from body text is font family (Inter vs JetBrains Mono) and weight (700 vs 400).
 
 Source: `app/ui/homepage/heroSection.tsx` token usage, `.planning/codebase/STACK.md` font token documentation, defaults applied for pixel values
 
@@ -199,7 +199,7 @@ Layout: Grid of category cards — 3 columns desktop, 2 columns tablet (md), 1 c
 | Section wrapper | `<section id="skills" aria-labelledby="skills-heading">`, py-2xl (48px), max-w-6xl |
 | Heading | Inter 36px bold, "Skills", centered, + `<UnderLine />` below |
 | Category card | shadcn `<Card>` with `p-6`, `border border-border` default |
-| Category heading | Inter 14px semibold (button-u weight), `text-foreground`, card header |
+| Category heading | Inter 14px bold (button-u weight), `text-foreground`, card header |
 | Icon grid | CSS grid, 3 columns inside each card, gap-8px |
 | Skill item | flex column, icon centered, name below — icon `size-8` (32px), name JetBrains Mono 12px `text-muted-foreground` |
 | Icon color | `text-brand1` as default; for colored brand icons use native brand color where available |
@@ -220,10 +220,10 @@ Layout: Vertical timeline. Left edge has a connecting line with dots; content ca
 | Education dot | `absolute left-2.5 top-3 size-3.5 rounded-sm border-2 border-brand2 bg-background aria-hidden="true"` (square, visually distinct) |
 | Entry wrapper | `relative mb-8 pl-12` |
 | Content card | shadcn `<Card>` with `p-6` |
-| Role title | Inter 36px → use `text-xl font-semibold` (20px semibold — heading within card context) |
+| Role title | Inter 36px → use `text-xl font-bold` (20px bold — heading within card context) |
 | Company + date | JetBrains Mono 14px `text-muted-foreground`, "Company • Date Range" |
 | Responsibilities | unordered list, JetBrains Mono 16px regular, `text-foreground`, `list-disc ml-4 space-y-1` |
-| Education separator | `<div className="my-8 flex items-center gap-4"><span className="font-inter text-sm font-semibold uppercase tracking-widest text-muted-foreground">Education</span><div className="h-px flex-1 bg-border" /></div>` |
+| Education separator | `<div className="my-8 flex items-center gap-4"><span className="font-inter text-sm font-bold uppercase tracking-widest text-muted-foreground">Education</span><div className="h-px flex-1 bg-border" /></div>` |
 | Education entries | same pl-12 / card pattern with square dot; no responsibilities list (degree + school + dates) |
 | Detail level | Full details shown for all work entries (no collapse/expand — this is a static portfolio) |
 | Education placement | Same vertical timeline, placed below all work experience with separator |
@@ -327,6 +327,8 @@ Source: 02-RESEARCH.md (react-icons analysis), components.json
 6. **Heading hierarchy:** The hero `<h1>` is `PERSONAL_INFO.name`. All section headings (`<h2>`) follow. Sub-headings in experience cards use `<h3>`. Do not skip levels.
 
 7. **Primary CTA button color:** The shadcn default `bg-primary` in midnight_steel resolves to near-white. For the hero primary button to use brand cyan (`#12F7D6`) as background, apply `className="bg-brand1 text-black hover:bg-brand1/90"` to override the default. This is the intentional design for the accent-colored primary action.
+
+8. **Button label weight:** `text-button-u` uses weight 700 (bold), matching the two-weight system (400 regular + 700 bold). Do not use `font-semibold` (600) for button labels — use `font-bold` (700).
 
 ---
 

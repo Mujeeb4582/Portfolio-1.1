@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-foundation-01-02-PLAN.md
-last_updated: "2026-03-18T13:12:11.165Z"
+stopped_at: Completed 01-foundation-01-04-PLAN.md
+last_updated: "2026-03-18T13:17:09.365Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
   percent: 0
 ---
 
@@ -52,6 +52,7 @@ Progress: [░░░░░░░░░░] 0%
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 25 | 2 tasks | 12 files |
 | Phase 01-foundation P02 | 14 | 2 tasks | 12 files |
+| Phase 01-foundation P04 | 5 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Used @source not ../.planning in globals.css to exclude planning docs from Tailwind v4 class scanning — ARCHITECTURE.md bg-[url(...)] caused Turbopack build failure
 - [Phase 01-foundation]: Removed eslint-plugin-tailwindcss (uses tailwindcss/resolveConfig removed in v4) — ESLint runs without Tailwind plugin
 - [Phase 01-foundation]: midnight_steel theme uses CSS variable overrides only (Option B) — not included in @custom-variant dark selector
+- [Phase 01-foundation]: Skill.icon is optional string (name lookup) not React.ComponentType — avoids SSR issues; LANGUAGE_ICONS kept for backward compat
+- [Phase 01-foundation]: constant.ts imports type from types.ts — all 7 exports (PERSONAL_INFO, PROJECTS, EXPERIENCE, EDUCATION, SKILLS, NAV_LINKS, LANGUAGE_ICONS) typed
 
 ### Pending Todos
 
@@ -83,6 +86,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T13:12:11.163Z
-Stopped at: Completed 01-foundation-01-02-PLAN.md
+Last session: 2026-03-18T13:17:09.363Z
+Stopped at: Completed 01-foundation-01-04-PLAN.md
 Resume file: None

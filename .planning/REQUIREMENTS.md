@@ -16,8 +16,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **FOUND-05**: All existing components compile and render correctly after upgrade
 - [x] **FOUND-06**: Dark mode toggle works correctly with Tailwind v4 `@custom-variant`
 - [ ] **FOUND-07**: Dead code, unused imports, and placeholder content are removed
-- [ ] **FOUND-08**: Data constants file (`constant.ts`) expanded with all portfolio content (projects, experience, skills, personal info)
-- [ ] **FOUND-09**: TypeScript interfaces defined for all data structures (Project, Experience, Skill, etc.)
+- [x] **FOUND-08**: Data constants file (`constant.ts`) expanded with all portfolio content (projects, experience, skills, personal info)
+- [x] **FOUND-09**: TypeScript interfaces defined for all data structures (Project, Experience, Skill, etc.)
 
 ### Navigation
 
@@ -130,8 +130,8 @@ Deferred to future release. Tracked but not in current roadmap.
 | FOUND-05 | Phase 1 | Pending |
 | FOUND-06 | Phase 1 | Complete |
 | FOUND-07 | Phase 1 | Pending |
-| FOUND-08 | Phase 1 | Pending |
-| FOUND-09 | Phase 1 | Pending |
+| FOUND-08 | Phase 1 | Complete |
+| FOUND-09 | Phase 1 | Complete |
 | NAV-04 | Phase 1 | Complete |
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |

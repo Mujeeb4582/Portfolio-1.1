@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-core-sections-04-PLAN.md
-last_updated: "2026-03-18T17:16:19.449Z"
+stopped_at: "Completed 02-core-sections-05-PLAN.md (checkpoint reached: human-verify)"
+last_updated: "2026-03-18T17:27:17.444Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 10
-  completed_plans: 9
+  completed_plans: 10
   percent: 0
 ---
 
@@ -59,6 +59,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-core-sections P02 | 8 | 1 tasks | 2 files |
 | Phase 02-core-sections P03 | 3 | 1 tasks | 1 files |
 | Phase 02-core-sections P04 | 3 | 1 tasks | 1 files |
+| Phase 02-core-sections PP05 | 8 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -90,6 +91,8 @@ Recent decisions affecting current work:
 - [Phase 02-core-sections]: SiCss used instead of SiCss3 — SiCss3 does not exist in react-icons/si v5.6.0; SiCss is the correct export
 - [Phase 02-core-sections]: AWS rendered text-only in Skills section — no SiAmazonaws or equivalent in react-icons/si v5.6.0; graceful fallback used
 - [Phase 02-core-sections]: SiNetlify confirmed in react-icons/si v5.6.0 and included in SKILL_ICON_MAP
+- [Phase 02-core-sections]: ExperienceSection is a Server Component (no use client) — purely presentational, all content from constants
+- [Phase 02-core-sections]: Fixed test EXP-01/EXP-02 bugs: getByText throws on multiple matches; used getAllByText for Microverse and React Native Developer per plan behavior spec
 
 ### Pending Todos
 
@@ -104,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T17:16:19.446Z
-Stopped at: Completed 02-core-sections-04-PLAN.md
+Last session: 2026-03-18T17:27:17.443Z
+Stopped at: Completed 02-core-sections-05-PLAN.md (checkpoint reached: human-verify)
 Resume file: None

@@ -111,7 +111,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-03-18 |
-| 2. Core Sections | 2/5 | In Progress|  |
+| 2. Core Sections | 4/5 | In Progress|  |
 | 3. Projects Section | 0/TBD | Not started | - |
 | 4. Navigation + Animations | 0/TBD | Not started | - |
 | 5. Contact Form | 0/TBD | Not started | - |

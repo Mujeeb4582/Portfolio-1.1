@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-core-sections-02-PLAN.md
-last_updated: "2026-03-18T17:15:14.299Z"
+stopped_at: Completed 02-core-sections-04-PLAN.md
+last_updated: "2026-03-18T17:16:19.449Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
   completed_phases: 1
   total_plans: 10
-  completed_plans: 7
+  completed_plans: 9
   percent: 0
 ---
 
@@ -57,6 +57,8 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation P05 | 525656 | 1 tasks | 5 files |
 | Phase 02-core-sections P01 | 4 | 2 tasks | 9 files |
 | Phase 02-core-sections P02 | 8 | 1 tasks | 2 files |
+| Phase 02-core-sections P03 | 3 | 1 tasks | 1 files |
+| Phase 02-core-sections P04 | 3 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -83,6 +85,11 @@ Recent decisions affecting current work:
 - [Phase 02-core-sections]: react-icons installed as production dependency (not devDep) — used at runtime in Skills section components
 - [Phase 02-core-sections]: heroSection.tsx: used native anchor with download attribute inside Button asChild for CV download — avoids JS, works without hydration
 - [Phase 02-core-sections]: heroSection.tsx: SOCIAL_LINKS defined at module scope (not inside component) — computed once at module load, not per render
+- [Phase 02-core-sections]: Server Component for about section (no 'use client') — purely presentational
+- [Phase 02-core-sections]: STATS array defined as const outside component — avoids recreation on re-renders
+- [Phase 02-core-sections]: SiCss used instead of SiCss3 — SiCss3 does not exist in react-icons/si v5.6.0; SiCss is the correct export
+- [Phase 02-core-sections]: AWS rendered text-only in Skills section — no SiAmazonaws or equivalent in react-icons/si v5.6.0; graceful fallback used
+- [Phase 02-core-sections]: SiNetlify confirmed in react-icons/si v5.6.0 and included in SKILL_ICON_MAP
 
 ### Pending Todos
 
@@ -97,6 +104,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T17:15:14.298Z
-Stopped at: Completed 02-core-sections-02-PLAN.md
+Last session: 2026-03-18T17:16:19.446Z
+Stopped at: Completed 02-core-sections-04-PLAN.md
 Resume file: None

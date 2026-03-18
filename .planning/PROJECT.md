@@ -100,6 +100,7 @@ Visitors can immediately understand Mujeeb's capabilities and experience through
 ## Constraints
 
 - **Tech Stack:** Next.js (latest) + React 19 + Tailwind CSS v4 + TypeScript
+- **Package Manager:** Bun (not npm/pnpm)
 - **Deployment:** Vercel (free tier)
 - **Contact Form:** Needs email service (Resend, EmailJS, or similar)
 - **No Backend:** Purely frontend, static content (except contact form API route)

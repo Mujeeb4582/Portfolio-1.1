@@ -132,9 +132,6 @@ Deferred to future release. Tracked but not in current roadmap.
 | FOUND-07 | Phase 1 | Pending |
 | FOUND-08 | Phase 1 | Pending |
 | FOUND-09 | Phase 1 | Pending |
-| NAV-01 | Phase 4 | Pending |
-| NAV-02 | Phase 4 | Pending |
-| NAV-03 | Phase 4 | Pending |
 | NAV-04 | Phase 1 | Pending |
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |
@@ -147,23 +144,27 @@ Deferred to future release. Tracked but not in current roadmap.
 | SKILL-01 | Phase 2 | Pending |
 | SKILL-02 | Phase 2 | Pending |
 | SKILL-03 | Phase 2 | Pending |
+| EXP-01 | Phase 2 | Pending |
+| EXP-02 | Phase 2 | Pending |
+| EXP-03 | Phase 2 | Pending |
+| EXP-04 | Phase 2 | Pending |
 | PROJ-01 | Phase 3 | Pending |
 | PROJ-02 | Phase 3 | Pending |
 | PROJ-03 | Phase 3 | Pending |
 | PROJ-04 | Phase 3 | Pending |
 | PROJ-05 | Phase 3 | Pending |
-| EXP-01 | Phase 2 | Pending |
-| EXP-02 | Phase 2 | Pending |
-| EXP-03 | Phase 2 | Pending |
-| EXP-04 | Phase 2 | Pending |
+| NAV-01 | Phase 4 | Pending |
+| NAV-02 | Phase 4 | Pending |
+| NAV-03 | Phase 4 | Pending |
+| ANIM-01 | Phase 4 | Pending |
+| ANIM-02 | Phase 4 | Pending |
+| ANIM-03 | Phase 4 | Pending |
+| DEPLOY-02 | Phase 4 | Pending |
 | CONT-01 | Phase 5 | Pending |
 | CONT-02 | Phase 5 | Pending |
 | CONT-03 | Phase 5 | Pending |
 | CONT-04 | Phase 5 | Pending |
 | CONT-05 | Phase 5 | Pending |
-| ANIM-01 | Phase 4 | Pending |
-| ANIM-02 | Phase 4 | Pending |
-| ANIM-03 | Phase 4 | Pending |
 | SEO-01 | Phase 6 | Pending |
 | SEO-02 | Phase 6 | Pending |
 | SEO-03 | Phase 6 | Pending |
@@ -174,13 +175,20 @@ Deferred to future release. Tracked but not in current roadmap.
 | A11Y-03 | Phase 6 | Pending |
 | A11Y-04 | Phase 6 | Pending |
 | DEPLOY-01 | Phase 6 | Pending |
-| DEPLOY-02 | Phase 6 | Pending |
 
 **Coverage:**
 - v1 requirements: 47 total
 - Mapped to phases: 47
 - Unmapped: 0 ✓
 
+**Phase breakdown:**
+- Phase 1 (Foundation): 10 requirements — FOUND-01 through FOUND-09, NAV-04
+- Phase 2 (Core Sections): 15 requirements — HERO-01 to HERO-05, ABOUT-01 to ABOUT-03, SKILL-01 to SKILL-03, EXP-01 to EXP-04
+- Phase 3 (Projects Section): 5 requirements — PROJ-01 to PROJ-05
+- Phase 4 (Navigation + Animations): 7 requirements — NAV-01 to NAV-03, ANIM-01 to ANIM-03, DEPLOY-02
+- Phase 5 (Contact Form): 5 requirements — CONT-01 to CONT-05
+- Phase 6 (SEO + Accessibility + Launch): 10 requirements — SEO-01 to SEO-05, A11Y-01 to A11Y-04, DEPLOY-01
+
 ---
 *Requirements defined: 2026-03-18*
-*Last updated: 2026-03-18 after initial definition*
+*Last updated: 2026-03-18 — traceability finalized after roadmap creation*

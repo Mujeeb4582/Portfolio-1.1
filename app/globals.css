@@ -53,6 +53,15 @@
   /* Background image tokens (decorative section backgrounds) */
   --background-image-about-bg: url('/aboutBackground.png');
   --background-image-skills-bg: url('/skillsBackground.png');
+
+  /* Typography scale — Phase 2 */
+  --font-size-h2-u: 2.25rem;       /* 36px — Inter 700, section headings, hero name/title */
+  --font-size-h2-m: 1.75rem;       /* 28px — JetBrains Mono 700, stat accent */
+  --font-size-number-m: 1.75rem;   /* 28px — JetBrains Mono 700, stat numbers */
+  --font-size-para-m: 1rem;        /* 16px — JetBrains Mono 400, body paragraphs */
+  --font-size-code-m: 0.875rem;    /* 14px — JetBrains Mono 400, meta text, date ranges */
+  --font-size-button-u: 0.875rem;  /* 14px — Inter 700, button labels */
+  --font-size-label-u-m: 0.875rem; /* 14px — Inter 400, stat card sub-labels */
 }
 
 @layer base {

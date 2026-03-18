@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 2 UI-SPEC approved
-last_updated: "2026-03-18T15:41:56.485Z"
+stopped_at: Completed 02-core-sections-01-PLAN.md
+last_updated: "2026-03-18T17:10:03.045Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
   completed_phases: 1
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 10
+  completed_plans: 6
   percent: 0
 ---
 
@@ -55,6 +55,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation P04 | 5 | 2 tasks | 3 files |
 | Phase 01-foundation P03 | 4 | 2 tasks | 9 files |
 | Phase 01-foundation P05 | 525656 | 1 tasks | 5 files |
+| Phase 02-core-sections P01 | 4 | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Used direct nextCoreWebVitals/nextTypescript imports in eslint.config.js instead of FlatCompat — FlatCompat incompatible with eslint-config-next@16 flat config arrays
 - [Phase 01-foundation]: Added "type": "module" to package.json — required for eslint.config.js to load as ES module
 - [Phase 01-foundation]: Chose font class replacement (Option 2) over dummy shim tokens (Option 1) — eliminates all orphaned font-ubuntu/ibmPlexMono references, aligns with Phase 1 Tailwind v4 migration intent
+- [Phase 02-core-sections]: Excluded tests/ from main tsconfig, created tsconfig.test.json — keeps pre-commit tsc clean while RED-phase tests reference non-existent components
+- [Phase 02-core-sections]: react-icons installed as production dependency (not devDep) — used at runtime in Skills section components
 
 ### Pending Todos
 
@@ -91,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T15:41:56.483Z
-Stopped at: Phase 2 UI-SPEC approved
-Resume file: .planning/phases/02-core-sections/02-UI-SPEC.md
+Last session: 2026-03-18T17:10:03.043Z
+Stopped at: Completed 02-core-sections-01-PLAN.md
+Resume file: None

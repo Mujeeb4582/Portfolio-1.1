@@ -28,23 +28,23 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Hero Section
 
-- [ ] **HERO-01**: Clean, minimal hero with name, title ("Full-Stack Web Developer"), and tagline
-- [ ] **HERO-02**: Professional avatar/photo with styled presentation
-- [ ] **HERO-03**: Primary CTA button ("Contact Me") and secondary CTA ("Download CV")
-- [ ] **HERO-04**: Social links (GitHub, LinkedIn, WhatsApp, Email) visible in hero
-- [ ] **HERO-05**: Download CV button serves actual PDF resume file
+- [x] **HERO-01**: Clean, minimal hero with name, title ("Full-Stack Web Developer"), and tagline
+- [x] **HERO-02**: Professional avatar/photo with styled presentation
+- [x] **HERO-03**: Primary CTA button ("Contact Me") and secondary CTA ("Download CV")
+- [x] **HERO-04**: Social links (GitHub, LinkedIn, WhatsApp, Email) visible in hero
+- [x] **HERO-05**: Download CV button serves actual PDF resume file
 
 ### About Section
 
-- [ ] **ABOUT-01**: Professional bio summarizing experience and expertise
-- [ ] **ABOUT-02**: Key stats/metrics display (years experience, projects completed, technologies)
-- [ ] **ABOUT-03**: Clean layout with professional image
+- [x] **ABOUT-01**: Professional bio summarizing experience and expertise
+- [x] **ABOUT-02**: Key stats/metrics display (years experience, projects completed, technologies)
+- [x] **ABOUT-03**: Clean layout with professional image
 
 ### Skills Section
 
-- [ ] **SKILL-01**: Skills organized by category (Frontend, Backend, Mobile, LLM/AI, Tools)
-- [ ] **SKILL-02**: Visual skill display with technology icons/logos
-- [ ] **SKILL-03**: All skills from resume represented accurately
+- [x] **SKILL-01**: Skills organized by category (Frontend, Backend, Mobile, LLM/AI, Tools)
+- [x] **SKILL-02**: Visual skill display with technology icons/logos
+- [x] **SKILL-03**: All skills from resume represented accurately
 
 ### Projects Section
 
@@ -56,10 +56,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Experience Section
 
-- [ ] **EXP-01**: Timeline display of work experience in chronological order
-- [ ] **EXP-02**: Each role shows company, title, date range, and key responsibilities
-- [ ] **EXP-03**: Experience includes: Wonder Crafts, Techiosis, RGX Labs, Microverse
-- [ ] **EXP-04**: Education section (Microverse, NUCES-FAST)
+- [x] **EXP-01**: Timeline display of work experience in chronological order
+- [x] **EXP-02**: Each role shows company, title, date range, and key responsibilities
+- [x] **EXP-03**: Experience includes: Wonder Crafts, Techiosis, RGX Labs, Microverse
+- [x] **EXP-04**: Education section (Microverse, NUCES-FAST)
 
 ### Contact Section
 
@@ -133,21 +133,21 @@ Deferred to future release. Tracked but not in current roadmap.
 | FOUND-08 | Phase 1 | Complete |
 | FOUND-09 | Phase 1 | Complete |
 | NAV-04 | Phase 1 | Complete |
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 2 | Pending |
-| HERO-04 | Phase 2 | Pending |
-| HERO-05 | Phase 2 | Pending |
-| ABOUT-01 | Phase 2 | Pending |
-| ABOUT-02 | Phase 2 | Pending |
-| ABOUT-03 | Phase 2 | Pending |
-| SKILL-01 | Phase 2 | Pending |
-| SKILL-02 | Phase 2 | Pending |
-| SKILL-03 | Phase 2 | Pending |
-| EXP-01 | Phase 2 | Pending |
-| EXP-02 | Phase 2 | Pending |
-| EXP-03 | Phase 2 | Pending |
-| EXP-04 | Phase 2 | Pending |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
+| HERO-03 | Phase 2 | Complete |
+| HERO-04 | Phase 2 | Complete |
+| HERO-05 | Phase 2 | Complete |
+| ABOUT-01 | Phase 2 | Complete |
+| ABOUT-02 | Phase 2 | Complete |
+| ABOUT-03 | Phase 2 | Complete |
+| SKILL-01 | Phase 2 | Complete |
+| SKILL-02 | Phase 2 | Complete |
+| SKILL-03 | Phase 2 | Complete |
+| EXP-01 | Phase 2 | Complete |
+| EXP-02 | Phase 2 | Complete |
+| EXP-03 | Phase 2 | Complete |
+| EXP-04 | Phase 2 | Complete |
 | PROJ-01 | Phase 3 | Pending |
 | PROJ-02 | Phase 3 | Pending |
 | PROJ-03 | Phase 3 | Pending |

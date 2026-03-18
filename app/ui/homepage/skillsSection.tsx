@@ -1,9 +1,22 @@
 import { LANGUAGE_ICONS, SKILLS } from '@/app/lib/constant'
+import type { SkillCategory } from '@/app/lib/types'
 import { LanguageIcons } from '@/app/ui/languageIcons'
-import { SkillsCard } from '@/app/ui/skillsCard'
 import { UnderLine } from '@/app/ui/underLine'
 
+const CATEGORY_ORDER: SkillCategory[] = [
+  'Frontend',
+  'Backend',
+  'Mobile',
+  'LLM/AI',
+  'Tools',
+]
+
 export default function SkillsSection() {
+  const skillsByCategory = CATEGORY_ORDER.map((category) => ({
+    category,
+    skills: SKILLS.filter((s) => s.category === category),
+  })).filter((group) => group.skills.length > 0)
+
   return (
     <div className="relative flex flex-col space-y-4 pb-16 pt-8 text-center">
       <div
@@ -22,15 +35,18 @@ export default function SkillsSection() {
         </p>
       </div>
       <div className="flex flex-col items-center space-y-8">
-        {SKILLS &&
-          SKILLS.map((skill) => (
-            <SkillsCard
-              key={skill.name}
-              name={skill.name}
-              icon={skill.icon}
-              language={skill.languages}
-            />
-          ))}
+        {skillsByCategory.map((group) => (
+          <div key={group.category} className="flex h-auto w-72 flex-col items-center space-y-2 rounded-lg bg-brand2 px-6 py-4 text-bg1">
+            <div className="font-ibmPlexMono text-menu-m">{group.category}</div>
+            <div className="flex flex-wrap justify-center gap-1">
+              {group.skills.map((skill) => (
+                <span key={skill.name} className="font-ibmPlexMono text-para-m text-grey">
+                  {skill.name}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
       <div className="grid grid-cols-2 justify-center gap-4 pt-20">
         {LANGUAGE_ICONS &&

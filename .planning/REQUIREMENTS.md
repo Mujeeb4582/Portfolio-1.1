@@ -21,9 +21,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Navigation
 
-- [ ] **NAV-01**: Sticky navbar with smooth-scroll anchor links to all sections
-- [ ] **NAV-02**: Mobile hamburger menu with slide-in navigation
-- [ ] **NAV-03**: Active section indicator highlights current section in navbar
+- [x] **NAV-01**: Sticky navbar with smooth-scroll anchor links to all sections
+- [x] **NAV-02**: Mobile hamburger menu with slide-in navigation
+- [x] **NAV-03**: Active section indicator highlights current section in navbar
 - [x] **NAV-04**: Theme toggle (light/dark) works with system preference auto-detection
 
 ### Hero Section
@@ -71,9 +71,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Animations & Interactions
 
-- [ ] **ANIM-01**: Subtle scroll-reveal animations on section entry using Motion library
+- [x] **ANIM-01**: Subtle scroll-reveal animations on section entry using Motion library
 - [ ] **ANIM-02**: Hover effects on interactive elements (buttons, cards, links)
-- [ ] **ANIM-03**: Respects `prefers-reduced-motion` user preference
+- [x] **ANIM-03**: Respects `prefers-reduced-motion` user preference
 
 ### SEO & Performance
 
@@ -153,12 +153,12 @@ Deferred to future release. Tracked but not in current roadmap.
 | PROJ-03 | Phase 3 | Complete |
 | PROJ-04 | Phase 3 | Complete |
 | PROJ-05 | Phase 3 | Complete |
-| NAV-01 | Phase 4 | Pending |
-| NAV-02 | Phase 4 | Pending |
-| NAV-03 | Phase 4 | Pending |
-| ANIM-01 | Phase 4 | Pending |
+| NAV-01 | Phase 4 | Complete |
+| NAV-02 | Phase 4 | Complete |
+| NAV-03 | Phase 4 | Complete |
+| ANIM-01 | Phase 4 | Complete |
 | ANIM-02 | Phase 4 | Pending |
-| ANIM-03 | Phase 4 | Pending |
+| ANIM-03 | Phase 4 | Complete |
 | DEPLOY-02 | Phase 4 | Pending |
 | CONT-01 | Phase 5 | Pending |
 | CONT-02 | Phase 5 | Pending |

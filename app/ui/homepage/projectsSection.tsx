@@ -168,8 +168,12 @@ function ProjectCard({ project }: { project: Project }) {
     ? 'h-40 md:h-[200px]'
     : 'h-40 md:h-[160px]'
 
+  const headingId = `project-title-${project.title.toLowerCase().replace(/\s+/g, '-')}`
+
   return (
     <Card
+      role="article"
+      aria-labelledby={headingId}
       className={cn(
         'border border-border hover:border-brand1 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col'
       )}
@@ -195,7 +199,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Card content */}
       <div className="flex flex-col gap-3 p-4 flex-1">
-        <h3 className="text-xl font-bold font-inter text-foreground">{project.title}</h3>
+        <h3 id={headingId} className="text-xl font-bold font-inter text-foreground">{project.title}</h3>
         <p className="font-jetbrains text-code-m text-muted-foreground">
           {project.role} at {project.company}
         </p>
@@ -230,8 +234,12 @@ function ProjectCard({ project }: { project: Project }) {
 function FeaturedProjectCard({ project }: { project: Project }) {
   const [imgError, setImgError] = useState(false)
 
+  const headingId = `project-title-${project.title.toLowerCase().replace(/\s+/g, '-')}`
+
   return (
     <Card
+      role="article"
+      aria-labelledby={headingId}
       className={cn(
         'border border-border border-t-2 border-t-brand1 hover:border-brand1 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col md:flex-row overflow-hidden'
       )}
@@ -249,7 +257,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
 
       {/* Content side */}
       <div className="flex flex-col gap-4 p-6 md:w-1/2">
-        <h3 className="text-xl font-bold font-inter text-foreground">{project.title}</h3>
+        <h3 id={headingId} className="text-xl font-bold font-inter text-foreground">{project.title}</h3>
         <p className="font-jetbrains text-code-m text-muted-foreground">
           {project.role} at {project.company}
         </p>

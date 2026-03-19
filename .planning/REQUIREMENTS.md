@@ -92,7 +92,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Deployment
 
-- [ ] **DEPLOY-01**: Vercel deployment configured and functional
+- [x] **DEPLOY-01**: Vercel deployment configured and functional
 - [x] **DEPLOY-02**: Responsive design works on mobile, tablet, and desktop
 
 ## v2 Requirements
@@ -174,7 +174,7 @@ Deferred to future release. Tracked but not in current roadmap.
 | A11Y-02 | Phase 6 | Complete |
 | A11Y-03 | Phase 6 | Complete |
 | A11Y-04 | Phase 6 | Complete |
-| DEPLOY-01 | Phase 6 | Pending |
+| DEPLOY-01 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 47 total

@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Projects Section** - Build the 6 featured project cards with screenshots, tech badges, and links (completed 2026-03-19)
 - [x] **Phase 4: Navigation + Animations** - Wire sticky nav, smooth scroll, active section highlight, mobile menu, and scroll-reveal animations (completed 2026-03-19)
 - [x] **Phase 5: Contact Form** - Build contact section with Resend email API route and form validation (completed 2026-03-19)
-- [ ] **Phase 6: SEO + Accessibility + Launch** - Apply metadata, Open Graph, JSON-LD, WCAG audit, Lighthouse 90+, and Vercel deploy
+- [x] **Phase 6: SEO + Accessibility + Launch** - Apply metadata, Open Graph, JSON-LD, WCAG audit, Lighthouse 90+, and Vercel deploy (completed 2026-03-19)
 
 ## Phase Details
 
@@ -137,7 +137,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Projects Section | 2/2 | Complete   | 2026-03-19 |
 | 4. Navigation + Animations | 5/5 | Complete   | 2026-03-19 |
 | 5. Contact Form | 3/3 | Complete   | 2026-03-19 |
-| 6. SEO + Accessibility + Launch | 3/4 | In Progress|  |
+| 6. SEO + Accessibility + Launch | 4/4 | Complete   | 2026-03-19 |
 
 ---
 *Roadmap created: 2026-03-18*

@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 06-seo-accessibility-launch-03-PLAN.md
-last_updated: "2026-03-19T19:50:35.189Z"
+stopped_at: "Checkpoint: 06-04 Task 2 — Deploy to Vercel and verify Lighthouse 90+ scores"
+last_updated: "2026-03-19T19:53:12.510Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
-  completed_phases: 5
+  completed_phases: 6
   total_plans: 24
-  completed_plans: 23
+  completed_plans: 24
   percent: 0
 ---
 
@@ -73,6 +73,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 06-seo-accessibility-launch P01 | 86 | 2 tasks | 4 files |
 | Phase 06-seo-accessibility-launch P02 | 15 | 2 tasks | 3 files |
 | Phase 06-seo-accessibility-launch PP03 | 5 | 2 tasks | 2 files |
+| Phase 06-seo-accessibility-launch P04 | 3 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -131,6 +132,7 @@ Recent decisions affecting current work:
 - [Phase 06-seo-accessibility-launch]: Project cards use role='article' + aria-labelledby with computed id from title slug for accessible names
 - [Phase 06-seo-accessibility-launch]: Mobile overlay motion.div gets role='dialog' aria-modal='true' for correct screen reader announcement
 - [Phase 06-seo-accessibility-launch]: next/image fill+sizes pattern for project screenshots — sizes attributes added (not width/height) because containers use fixed CSS heights; BrowserFrame: 100vw/50vw/600px, PhoneFrame: 50vw/280px
+- [Phase 06-seo-accessibility-launch]: vercel.json uses @resend_api_key Vercel secret reference — user must add RESEND_API_KEY in Project Settings before deploy
 
 ### Pending Todos
 
@@ -145,6 +147,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T19:50:35.188Z
-Stopped at: Completed 06-seo-accessibility-launch-03-PLAN.md
+Last session: 2026-03-19T19:53:12.508Z
+Stopped at: Checkpoint: 06-04 Task 2 — Deploy to Vercel and verify Lighthouse 90+ scores
 Resume file: None

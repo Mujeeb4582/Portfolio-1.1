@@ -75,19 +75,19 @@ export default function SidebarNav() {
                     onClick={(e) => scrollToSection(e, link.href)}
                     className={cn(
                       'group flex items-center py-3 transition-all',
-                      isActive ? 'text-foreground' : 'text-muted-foreground'
+                      isActive ? 'text-brand1' : 'text-muted-foreground'
                     )}
                   >
                     <span
                       className={cn(
-                        'mr-4 h-px transition-all group-hover:w-16 group-hover:bg-foreground',
-                        isActive ? 'w-16 bg-foreground' : 'w-8 bg-muted-foreground'
+                        'mr-4 h-px transition-all group-hover:w-16 group-hover:bg-brand1',
+                        isActive ? 'w-16 bg-brand1' : 'w-8 bg-muted-foreground'
                       )}
                     />
                     <span
                       className={cn(
-                        'font-inter text-xs font-bold uppercase tracking-widest transition-colors group-hover:text-foreground',
-                        isActive ? 'text-foreground' : 'text-muted-foreground'
+                        'font-inter text-xs font-bold uppercase tracking-widest transition-colors group-hover:text-brand1',
+                        isActive ? 'text-brand1' : 'text-muted-foreground'
                       )}
                     >
                       {link.label}

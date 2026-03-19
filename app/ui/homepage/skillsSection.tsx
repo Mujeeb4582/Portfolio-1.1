@@ -4,7 +4,6 @@
 import { SKILLS } from '@/app/lib/constant'
 import type { SkillCategory } from '@/app/lib/types'
 import { AnimateIn, StaggerChildren, StaggerItem } from '@/app/ui/animate-in'
-import { Card } from '@/app/ui/card'
 import {
   SiAntdesign,
   SiBootstrap,
@@ -104,45 +103,31 @@ export default function SkillsSection() {
         <h2 className="font-inter text-sm font-bold uppercase tracking-widest text-foreground">Skills</h2>
       </div>
 
-      {/* Category card grid */}
-      <StaggerChildren className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {/* Category groups */}
+      <StaggerChildren className="space-y-10">
         {skillsByCategory.map(({ category, skills }) => (
           <StaggerItem key={category}>
-            <Card className="p-6 transition-colors duration-200 hover:border-brand1/50">
-              <h3 className="mb-4 font-inter text-button-u font-bold text-foreground">
+            <AnimateIn>
+              <h3 className="mb-4 font-inter text-sm font-semibold text-foreground">
                 {category}
               </h3>
-
-              {/* Skill icon grid: 3 columns inside each card */}
-              <div className="grid grid-cols-3 gap-2">
+              <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => {
                   const Icon = SKILL_ICON_MAP[skill.name]
                   return (
-                    <div
+                    <span
                       key={skill.name}
-                      className="flex flex-col items-center gap-1"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-brand1/10 px-3 py-1.5 font-jetbrains text-xs font-medium text-brand1"
                     >
-                      {Icon ? (
-                        <Icon
-                          className="size-8 text-brand1"
-                          aria-hidden="true"
-                        />
-                      ) : (
-                        <div
-                          className="flex size-8 items-center justify-center rounded-sm bg-muted text-xs font-bold text-muted-foreground"
-                          aria-hidden="true"
-                        >
-                          {skill.name.charAt(0)}
-                        </div>
+                      {Icon && (
+                        <Icon className="size-3.5" aria-hidden="true" />
                       )}
-                      <span className="text-center font-jetbrains text-code-m text-muted-foreground">
-                        {skill.name}
-                      </span>
-                    </div>
+                      {skill.name}
+                    </span>
                   )
                 })}
               </div>
-            </Card>
+            </AnimateIn>
           </StaggerItem>
         ))}
       </StaggerChildren>

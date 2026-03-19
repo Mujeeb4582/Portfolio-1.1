@@ -21,13 +21,24 @@ export function useActiveSection(): string {
         }
       },
       {
-        rootMargin: '-20% 0px -70% 0px',
-        threshold: [0, 0.25, 0.5, 0.75, 1],
+        rootMargin: '-10% 0px -40% 0px',
+        threshold: [0, 0.1, 0.25, 0.5],
       }
     )
 
     sections.forEach((section) => observer.observe(section))
-    return () => observer.disconnect()
+
+    // Also detect when user is near page bottom (for Contact)
+    const handleScroll = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100
+      if (atBottom) setActiveSection('contact')
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return activeSection

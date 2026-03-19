@@ -77,9 +77,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### SEO & Performance
 
-- [ ] **SEO-01**: Meta tags (title, description) on all pages
-- [ ] **SEO-02**: Open Graph tags with custom OG image for social sharing
-- [ ] **SEO-03**: JSON-LD structured data (Person schema)
+- [x] **SEO-01**: Meta tags (title, description) on all pages
+- [x] **SEO-02**: Open Graph tags with custom OG image for social sharing
+- [x] **SEO-03**: JSON-LD structured data (Person schema)
 - [ ] **SEO-04**: Lighthouse performance score 90+
 - [ ] **SEO-05**: Images optimized (WebP format, proper sizing, lazy loading)
 
@@ -165,9 +165,9 @@ Deferred to future release. Tracked but not in current roadmap.
 | CONT-03 | Phase 5 | Complete |
 | CONT-04 | Phase 5 | Complete |
 | CONT-05 | Phase 5 | Complete |
-| SEO-01 | Phase 6 | Pending |
-| SEO-02 | Phase 6 | Pending |
-| SEO-03 | Phase 6 | Pending |
+| SEO-01 | Phase 6 | Complete |
+| SEO-02 | Phase 6 | Complete |
+| SEO-03 | Phase 6 | Complete |
 | SEO-04 | Phase 6 | Pending |
 | SEO-05 | Phase 6 | Pending |
 | A11Y-01 | Phase 6 | Pending |

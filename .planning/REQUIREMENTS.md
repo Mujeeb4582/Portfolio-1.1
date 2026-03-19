@@ -72,7 +72,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Animations & Interactions
 
 - [x] **ANIM-01**: Subtle scroll-reveal animations on section entry using Motion library
-- [ ] **ANIM-02**: Hover effects on interactive elements (buttons, cards, links)
+- [x] **ANIM-02**: Hover effects on interactive elements (buttons, cards, links)
 - [x] **ANIM-03**: Respects `prefers-reduced-motion` user preference
 
 ### SEO & Performance
@@ -93,7 +93,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Deployment
 
 - [ ] **DEPLOY-01**: Vercel deployment configured and functional
-- [ ] **DEPLOY-02**: Responsive design works on mobile, tablet, and desktop
+- [x] **DEPLOY-02**: Responsive design works on mobile, tablet, and desktop
 
 ## v2 Requirements
 
@@ -157,9 +157,9 @@ Deferred to future release. Tracked but not in current roadmap.
 | NAV-02 | Phase 4 | Complete |
 | NAV-03 | Phase 4 | Complete |
 | ANIM-01 | Phase 4 | Complete |
-| ANIM-02 | Phase 4 | Pending |
+| ANIM-02 | Phase 4 | Complete |
 | ANIM-03 | Phase 4 | Complete |
-| DEPLOY-02 | Phase 4 | Pending |
+| DEPLOY-02 | Phase 4 | Complete |
 | CONT-01 | Phase 5 | Pending |
 | CONT-02 | Phase 5 | Pending |
 | CONT-03 | Phase 5 | Pending |

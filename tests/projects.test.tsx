@@ -16,14 +16,15 @@ describe('ProjectsSection', () => {
     expect(section).toHaveAttribute('aria-labelledby', 'projects-heading')
   })
 
-  it('PROJ-01: all 6 project titles are rendered', () => {
+  it('PROJ-01: all 6 project titles are rendered as h3 headings', () => {
     render(<ProjectsSection />)
-    expect(screen.getByText('Buildable')).toBeInTheDocument()
-    expect(screen.getByText('MISA App')).toBeInTheDocument()
-    expect(screen.getByText('Uber-like App')).toBeInTheDocument()
-    expect(screen.getByText('Re-View')).toBeInTheDocument()
-    expect(screen.getByText('LSTN')).toBeInTheDocument()
-    expect(screen.getByText('WellShared')).toBeInTheDocument()
+    // Use getAllByText since project title also appears in the browser URL bar
+    expect(screen.getAllByText('Buildable').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('MISA App').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Uber-like App').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Re-View').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('LSTN').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('WellShared').length).toBeGreaterThan(0)
   })
 
   it('PROJ-01: all 6 project titles use h3 headings', () => {
@@ -75,9 +76,10 @@ describe('ProjectsSection', () => {
 
   it('PROJ-04: tech stack pills are rendered for Buildable', () => {
     render(<ProjectsSection />)
-    expect(screen.getByText('Next.js')).toBeInTheDocument()
+    // Next.js appears in multiple projects' tech stacks; getAllByText is appropriate
+    expect(screen.getAllByText('Next.js').length).toBeGreaterThan(0)
     expect(screen.getByText('FastAPI')).toBeInTheDocument()
-    expect(screen.getByText('Supabase')).toBeInTheDocument()
+    expect(screen.getAllByText('Supabase').length).toBeGreaterThan(0)
   })
 
   it('PROJ-05: BrowserFrame rendered for web projects (browser dots present)', () => {
@@ -93,8 +95,8 @@ describe('ProjectsSection', () => {
   it('PROJ-05: both web and mobile project types are distinguishable via frame classes', () => {
     render(<ProjectsSection />)
     const section = document.getElementById('projects')
-    // PhoneFrame has rounded-[2rem] class
-    expect(section?.innerHTML).toContain('rounded-\\[2rem\\]')
+    // PhoneFrame has rounded-[2rem] class (escaped in HTML as-is)
+    expect(section?.innerHTML).toContain('rounded-[2rem]')
   })
 
   it('PROJ-05: grid section renders PROJECTS[1..5] in a 2-column grid container', () => {

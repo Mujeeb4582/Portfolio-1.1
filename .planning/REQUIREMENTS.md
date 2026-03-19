@@ -80,15 +80,15 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SEO-01**: Meta tags (title, description) on all pages
 - [x] **SEO-02**: Open Graph tags with custom OG image for social sharing
 - [x] **SEO-03**: JSON-LD structured data (Person schema)
-- [ ] **SEO-04**: Lighthouse performance score 90+
-- [ ] **SEO-05**: Images optimized (WebP format, proper sizing, lazy loading)
+- [x] **SEO-04**: Lighthouse performance score 90+
+- [x] **SEO-05**: Images optimized (WebP format, proper sizing, lazy loading)
 
 ### Accessibility
 
-- [ ] **A11Y-01**: Full keyboard navigation across all interactive elements
-- [ ] **A11Y-02**: Visible focus indicators on all focusable elements
-- [ ] **A11Y-03**: Color contrast ratio meets WCAG 2.2 AA (4.5:1 minimum)
-- [ ] **A11Y-04**: Semantic HTML with proper heading hierarchy and landmarks
+- [x] **A11Y-01**: Full keyboard navigation across all interactive elements
+- [x] **A11Y-02**: Visible focus indicators on all focusable elements
+- [x] **A11Y-03**: Color contrast ratio meets WCAG 2.2 AA (4.5:1 minimum)
+- [x] **A11Y-04**: Semantic HTML with proper heading hierarchy and landmarks
 
 ### Deployment
 
@@ -168,12 +168,12 @@ Deferred to future release. Tracked but not in current roadmap.
 | SEO-01 | Phase 6 | Complete |
 | SEO-02 | Phase 6 | Complete |
 | SEO-03 | Phase 6 | Complete |
-| SEO-04 | Phase 6 | Pending |
-| SEO-05 | Phase 6 | Pending |
-| A11Y-01 | Phase 6 | Pending |
-| A11Y-02 | Phase 6 | Pending |
-| A11Y-03 | Phase 6 | Pending |
-| A11Y-04 | Phase 6 | Pending |
+| SEO-04 | Phase 6 | Complete |
+| SEO-05 | Phase 6 | Complete |
+| A11Y-01 | Phase 6 | Complete |
+| A11Y-02 | Phase 6 | Complete |
+| A11Y-03 | Phase 6 | Complete |
+| A11Y-04 | Phase 6 | Complete |
 | DEPLOY-01 | Phase 6 | Pending |
 
 **Coverage:**

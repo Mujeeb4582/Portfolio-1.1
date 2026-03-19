@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import MobileNav from '@/app/ui/mobile-nav'
+
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ClientThemeProvider } from './ui/theme/clientThemeProvider'
 import { PERSONAL_INFO } from '@/app/lib/constant'

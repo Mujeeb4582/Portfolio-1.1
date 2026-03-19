@@ -202,17 +202,17 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Card content */}
       <div className="flex flex-col gap-3 p-4 flex-1">
         <h3 id={headingId} className="text-xl font-bold font-inter text-foreground">{project.title}</h3>
-        <p className="font-jetbrains text-code-m text-muted-foreground">
+        <p className="text-sm text-muted-foreground">
           {project.role} at {project.company}
         </p>
-        <p className="font-jetbrains text-para-m text-foreground line-clamp-3">
+        <p className="text-sm text-muted-foreground line-clamp-3">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 mt-2">
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="font-jetbrains rounded-full bg-muted px-2 py-1 text-code-m text-muted-foreground"
+              className="rounded-full bg-brand1/10 px-2.5 py-1 font-jetbrains text-xs font-medium text-brand1"
             >
               {tech}
             </span>
@@ -260,17 +260,17 @@ function FeaturedProjectCard({ project }: { project: Project }) {
       {/* Content side */}
       <div className="flex flex-col gap-4 p-6 md:w-1/2">
         <h3 id={headingId} className="text-xl font-bold font-inter text-foreground">{project.title}</h3>
-        <p className="font-jetbrains text-code-m text-muted-foreground">
+        <p className="text-sm text-muted-foreground">
           {project.role} at {project.company}
         </p>
-        <p className="font-jetbrains text-para-m text-foreground">
+        <p className="text-sm text-muted-foreground">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 mt-auto">
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="font-jetbrains rounded-full bg-muted px-2 py-1 text-code-m text-muted-foreground"
+              className="rounded-full bg-brand1/10 px-2.5 py-1 font-jetbrains text-xs font-medium text-brand1"
             >
               {tech}
             </span>

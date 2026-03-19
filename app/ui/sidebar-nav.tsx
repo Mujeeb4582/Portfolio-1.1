@@ -56,11 +56,11 @@ export default function SidebarNav() {
             {PERSONAL_INFO.name}
           </a>
         </h1>
-        <h2 className="mt-3 font-inter text-lg font-medium tracking-tight text-foreground sm:text-xl">
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-muted-foreground sm:text-xl">
           {PERSONAL_INFO.title}
         </h2>
-        <p className="mt-4 max-w-xs font-jetbrains text-para-m leading-normal text-muted-foreground">
-          {PERSONAL_INFO.bio.slice(0, 140)}...
+        <p className="mt-4 max-w-xs text-base leading-normal text-muted-foreground">
+          I build pixel-perfect, accessible web and mobile experiences.
         </p>
 
         {/* Navigation — desktop only */}

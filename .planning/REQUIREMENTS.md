@@ -63,11 +63,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Contact Section
 
-- [ ] **CONT-01**: Contact form with name, email, and message fields
-- [ ] **CONT-02**: Form validation with clear error messages (Zod + React Hook Form)
-- [ ] **CONT-03**: Form submission sends email via Resend API route
-- [ ] **CONT-04**: Success/error feedback after form submission
-- [ ] **CONT-05**: Direct contact links (email, WhatsApp, LinkedIn, GitHub) alongside form
+- [x] **CONT-01**: Contact form with name, email, and message fields
+- [x] **CONT-02**: Form validation with clear error messages (Zod + React Hook Form)
+- [x] **CONT-03**: Form submission sends email via Resend API route
+- [x] **CONT-04**: Success/error feedback after form submission
+- [x] **CONT-05**: Direct contact links (email, WhatsApp, LinkedIn, GitHub) alongside form
 
 ### Animations & Interactions
 
@@ -160,11 +160,11 @@ Deferred to future release. Tracked but not in current roadmap.
 | ANIM-02 | Phase 4 | Complete |
 | ANIM-03 | Phase 4 | Complete |
 | DEPLOY-02 | Phase 4 | Complete |
-| CONT-01 | Phase 5 | Pending |
-| CONT-02 | Phase 5 | Pending |
-| CONT-03 | Phase 5 | Pending |
-| CONT-04 | Phase 5 | Pending |
-| CONT-05 | Phase 5 | Pending |
+| CONT-01 | Phase 5 | Complete |
+| CONT-02 | Phase 5 | Complete |
+| CONT-03 | Phase 5 | Complete |
+| CONT-04 | Phase 5 | Complete |
+| CONT-05 | Phase 5 | Complete |
 | SEO-01 | Phase 6 | Pending |
 | SEO-02 | Phase 6 | Pending |
 | SEO-03 | Phase 6 | Pending |

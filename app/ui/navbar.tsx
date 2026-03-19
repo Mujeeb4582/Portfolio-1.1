@@ -1,6 +1,6 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
-import Link from 'next/link'
+import { useState, useEffect, useRef, useCallback } from 'react'
+
 import { AnimatePresence, motion } from 'motion/react'
 import { NAV_LINKS } from '@/app/lib/constant'
 import { cn } from '@/app/lib/utils'
@@ -12,6 +12,16 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const activeSection = useActiveSection()
   const menuRef = useRef<HTMLDivElement>(null)
+
+  const scrollToSection = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const id = href.replace('#', '')
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+      window.history.pushState(null, '', href)
+    }
+  }, [])
 
   // Scroll-aware background
   useEffect(() => {
@@ -51,19 +61,19 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between">
           {/* Logo */}
-          <Link href="#hero" scroll={false} className="font-inter text-xl font-bold text-foreground transition-colors hover:text-brand1">
+          <a href="#hero" onClick={(e) => scrollToSection(e, '#hero')} className="font-inter text-xl font-bold text-foreground transition-colors hover:text-brand1">
             <span className="text-brand1">M</span>ujeeb
-          </Link>
+          </a>
 
           {/* Desktop nav links */}
           <div className="hidden items-center gap-6 md:flex">
             {NAV_LINKS.map((link) => {
               const isActive = link.href === `#${activeSection}`
               return (
-                <Link
+                <a
                   key={link.label}
                   href={link.href}
-                  scroll={false}
+                  onClick={(e) => scrollToSection(e, link.href)}
                   className={cn(
                     'relative font-inter text-sm font-medium text-foreground transition-colors hover:text-brand1',
                     isActive && 'text-brand1'
@@ -77,7 +87,7 @@ export default function Navbar() {
                       isActive ? 'opacity-100' : 'opacity-0'
                     )}
                   />
-                </Link>
+                </a>
               )
             })}
             <ThemeToggle />
@@ -122,15 +132,14 @@ export default function Navbar() {
           >
             <nav ref={menuRef} className="flex flex-col items-center gap-8">
               {NAV_LINKS.map((link) => (
-                <Link
+                <a
                   key={link.label}
                   href={link.href}
-                  scroll={false}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => { scrollToSection(e, link.href); setIsOpen(false) }}
                   className="font-inter text-2xl font-bold text-foreground transition-colors hover:text-brand1"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </nav>
           </motion.div>

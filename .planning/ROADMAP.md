@@ -101,7 +101,12 @@ Plans:
   2. Submitting with invalid data shows clear, field-level error messages before sending
   3. After submission the user sees a success or error notification
   4. Email, WhatsApp, LinkedIn, and GitHub direct contact links are visible alongside the form
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Install deps (react-hook-form, zod, resend) + shadcn Textarea + shared Zod schema + test scaffold (CONT-01 to CONT-05)
+- [ ] 05-02-PLAN.md — Build ContactSection + /api/contact route + page wiring (CONT-01 to CONT-05)
+- [ ] 05-03-PLAN.md — Visual checkpoint: form validation, submission, themes, responsive (CONT-01 to CONT-05)
 
 ### Phase 6: SEO + Accessibility + Launch
 **Goal**: The portfolio is fully discoverable by search engines and social sharing, meets WCAG 2.2 AA accessibility requirements, scores 90+ on Lighthouse, and is live on Vercel
@@ -125,7 +130,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Core Sections | 5/5 | Complete   | 2026-03-18 |
 | 3. Projects Section | 2/2 | Complete   | 2026-03-19 |
 | 4. Navigation + Animations | 5/5 | Complete   | 2026-03-19 |
-| 5. Contact Form | 0/TBD | Not started | - |
+| 5. Contact Form | 0/3 | Not started | - |
 | 6. SEO + Accessibility + Launch | 0/TBD | Not started | - |
 
 ---
@@ -135,3 +140,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 *Phase 2 planned: 2026-03-18 — 5 plans across 3 waves*
 *Phase 3 planned: 2026-03-19 — 2 plans across 2 waves*
 *Phase 4 planned: 2026-03-19 — 5 plans across 4 waves*
+*Phase 5 planned: 2026-03-19 — 3 plans across 3 waves*

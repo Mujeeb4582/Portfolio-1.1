@@ -65,6 +65,12 @@
 }
 
 @layer base {
+  /* Light theme: use slate-800 for brand1 — clean, professional, no color clash */
+  :root:not(.dark):not(.midnight_steel) {
+    --color-brand1: #1e293b;
+    --color-brand2: #334155;
+  }
+
   .dark {
     --color-background: hsl(20 14.3% 4.1%);
     --color-foreground: hsl(60 9.1% 97.8%);

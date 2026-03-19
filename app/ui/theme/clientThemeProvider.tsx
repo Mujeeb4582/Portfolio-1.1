@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { ThemeProvider } from 'next-themes'
+import { MotionConfig } from 'motion/react'
 
 export function ClientThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false)
@@ -15,7 +16,9 @@ export function ClientThemeProvider({ children }: { children: React.ReactNode })
       themes={['light', 'dark', 'midnight_steel']}
       disableTransitionOnChange
     >
-      {children}
+      <MotionConfig reducedMotion="user">
+        {children}
+      </MotionConfig>
     </ThemeProvider>
   )
 }

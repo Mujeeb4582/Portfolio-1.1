@@ -83,7 +83,14 @@ Plans:
   3. Mobile hamburger menu opens, shows all links, and closes after selecting one
   4. Section headings and cards animate in on scroll entry (not visible on first load until in view)
   5. Animations are absent or reduced when the OS `prefers-reduced-motion` setting is enabled
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Install motion + MotionConfig + scroll-smooth + useActiveSection hook + test scaffolds
+- [ ] 04-02-PLAN.md — Rebuild navbar: sticky, active indicator, mobile hamburger overlay (NAV-01, NAV-02, NAV-03, ANIM-02, DEPLOY-02)
+- [ ] 04-03-PLAN.md — AnimateIn + StaggerChildren + StaggerItem wrappers (ANIM-01, ANIM-03)
+- [ ] 04-04-PLAN.md — Wire animations into all sections + contact placeholder (ANIM-01, ANIM-02, DEPLOY-02)
+- [ ] 04-05-PLAN.md — Visual checkpoint: nav, scroll-reveal, mobile, reduced-motion (all requirements)
 
 ### Phase 5: Contact Form
 **Goal**: Visitors can send Mujeeb a message directly from the portfolio and reach him through direct contact channels
@@ -117,7 +124,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation | 5/5 | Complete   | 2026-03-18 |
 | 2. Core Sections | 5/5 | Complete   | 2026-03-18 |
 | 3. Projects Section | 2/2 | Complete   | 2026-03-19 |
-| 4. Navigation + Animations | 0/TBD | Not started | - |
+| 4. Navigation + Animations | 0/5 | Not started | - |
 | 5. Contact Form | 0/TBD | Not started | - |
 | 6. SEO + Accessibility + Launch | 0/TBD | Not started | - |
 
@@ -127,3 +134,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 *Phase 1 planned: 2026-03-18 — 4 plans across 3 waves*
 *Phase 2 planned: 2026-03-18 — 5 plans across 3 waves*
 *Phase 3 planned: 2026-03-19 — 2 plans across 2 waves*
+*Phase 4 planned: 2026-03-19 — 5 plans across 4 waves*

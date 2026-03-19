@@ -293,30 +293,17 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      aria-labelledby="projects-heading"
-      className="w-full max-w-6xl px-6 py-12"
+      aria-label="Projects"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
-      {/* Section heading */}
-      <AnimateIn>
-        <div className="mb-12 flex flex-col items-center gap-3 text-center">
-          <h2
-            id="projects-heading"
-            className="font-inter text-h2-u font-bold text-foreground"
-          >
-            Projects
-          </h2>
-          <UnderLine />
-        </div>
-      </AnimateIn>
+      {/* Sticky heading — mobile only */}
+      <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur-sm lg:sr-only">
+        <h2 className="font-inter text-sm font-bold uppercase tracking-widest text-foreground">Projects</h2>
+      </div>
 
-      {/* Featured project (Buildable) */}
-      <AnimateIn delay={0.1} className="mb-8">
-        <FeaturedProjectCard project={PROJECTS[0]} />
-      </AnimateIn>
-
-      {/* Projects grid — remaining 5 projects */}
-      <StaggerChildren className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {PROJECTS.slice(1).map((project) => (
+      {/* All projects in a list */}
+      <StaggerChildren className="space-y-8">
+        {PROJECTS.map((project) => (
           <StaggerItem key={project.title}>
             <ProjectCard project={project} />
           </StaggerItem>

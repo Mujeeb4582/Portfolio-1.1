@@ -1,113 +1,85 @@
-// experienceSection.tsx — Phase 2 Plan 05
-// Vertical timeline: work experience entries + education subsection
 import { EDUCATION, EXPERIENCE } from '@/app/lib/constant'
 import { AnimateIn, StaggerChildren, StaggerItem } from '@/app/ui/animate-in'
-import { Card } from '@/app/ui/card'
-import { UnderLine } from '@/app/ui/underLine'
 
 export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      aria-labelledby="experience-heading"
-      className="w-full max-w-6xl px-6 py-12"
+      aria-label="Work experience"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
-      {/* Section heading */}
-      <AnimateIn>
-        <div className="mb-12 flex flex-col items-center gap-3 text-center">
-          <h2
-            id="experience-heading"
-            className="font-inter text-h2-u font-bold text-foreground"
-          >
-            Experience
-          </h2>
-          <UnderLine />
-        </div>
-      </AnimateIn>
+      {/* Sticky heading — mobile only */}
+      <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur-sm lg:sr-only">
+        <h2 className="font-inter text-sm font-bold uppercase tracking-widest text-foreground">Experience</h2>
+      </div>
 
-      {/* Timeline */}
-      <div className="relative">
-        {/* Vertical connecting line */}
-        <div
-          className="absolute left-4 top-0 h-full w-0.5 bg-brand1/30"
-          aria-hidden="true"
-        />
-
-        {/* Work experience entries */}
-        <StaggerChildren>
-          {EXPERIENCE.map((entry) => (
-            <StaggerItem key={entry.company}>
-              <div className="relative mb-8 pl-12">
-                {/* Circle dot for work entries */}
-                <div
-                  className="absolute left-2.5 top-3 size-3.5 rounded-full border-2 border-brand1 bg-background"
-                  aria-hidden="true"
-                />
-
-                <Card className="p-6 transition-colors duration-150 hover:bg-card/80">
-                  <h3 className="font-inter text-xl font-bold text-foreground">
-                    {entry.role}
+      {/* Experience entries — Brittany Chiang style: date left, content right */}
+      <StaggerChildren>
+        {EXPERIENCE.map((entry) => (
+          <StaggerItem key={entry.company}>
+            <AnimateIn>
+              <div className="group relative mb-2 grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
+                <header className="z-10 mb-2 mt-1 font-jetbrains text-xs font-semibold uppercase tracking-wide text-muted-foreground sm:col-span-2">
+                  {entry.dateRange}
+                </header>
+                <div className="z-10 sm:col-span-6">
+                  <h3 className="font-inter font-medium leading-snug text-foreground">
+                    <span>{entry.role}</span>
+                    <span className="text-brand1"> · </span>
+                    <span className="inline-block font-medium text-brand1">{entry.company}</span>
                   </h3>
-                  <p className="mt-1 font-jetbrains text-code-m text-muted-foreground">
-                    <span>{entry.company}</span>
-                    <span aria-hidden="true"> &bull; </span>
-                    <span>{entry.dateRange}</span>
-                  </p>
                   {entry.responsibilities.length > 0 && (
-                    <ul className="mt-3 list-disc pl-4 font-jetbrains text-para-m text-foreground">
+                    <ul className="mt-2 space-y-1">
                       {entry.responsibilities.map((resp) => (
-                        <li key={resp} className="mb-1">
+                        <li key={resp} className="font-jetbrains text-sm leading-normal text-muted-foreground">
                           {resp}
                         </li>
                       ))}
                     </ul>
                   )}
-                </Card>
+                </div>
               </div>
-            </StaggerItem>
-          ))}
-        </StaggerChildren>
+            </AnimateIn>
+          </StaggerItem>
+        ))}
+      </StaggerChildren>
 
-        {/* Education separator */}
-        <AnimateIn delay={0.1}>
-          <div className="relative mb-8 pl-12">
-            <div className="flex items-center gap-4">
-              <span className="font-inter text-sm font-bold uppercase tracking-widest text-muted-foreground">
-                Education
-              </span>
-              <div className="h-px flex-1 bg-border" />
-            </div>
-          </div>
-        </AnimateIn>
-
-        {/* Education entries */}
+      {/* Education */}
+      <div className="mt-8 border-t border-border pt-8">
+        <h3 className="mb-6 font-inter text-sm font-bold uppercase tracking-widest text-muted-foreground">Education</h3>
         <StaggerChildren>
           {EDUCATION.map((edu) => (
             <StaggerItem key={edu.institution}>
-              <div className="relative mb-8 pl-12">
-                {/* Square dot for education entries — visually distinct from work */}
-                <div
-                  className="absolute left-2.5 top-3 size-3.5 rounded-sm border-2 border-brand2 bg-background"
-                  aria-hidden="true"
-                />
-
-                <Card className="p-6 transition-colors duration-150 hover:bg-card/80">
-                  <h3 className="font-inter text-xl font-bold text-foreground">
-                    {edu.institution}
-                  </h3>
-                  <p className="mt-1 font-jetbrains text-code-m text-muted-foreground">
-                    {edu.degree}
-                  </p>
-                  <p className="font-jetbrains text-code-m text-muted-foreground">
+              <AnimateIn>
+                <div className="group relative mb-2 grid pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4">
+                  <header className="z-10 mb-2 mt-1 font-jetbrains text-xs font-semibold uppercase tracking-wide text-muted-foreground sm:col-span-2">
                     {edu.location}
-                    {edu.note ? ` \u2022 ${edu.note}` : ''}
-                  </p>
-                </Card>
-              </div>
+                  </header>
+                  <div className="z-10 sm:col-span-6">
+                    <h4 className="font-inter font-medium leading-snug text-foreground">{edu.institution}</h4>
+                    <p className="mt-1 font-jetbrains text-sm text-muted-foreground">{edu.degree}</p>
+                    {edu.note && <p className="font-jetbrains text-sm text-muted-foreground">{edu.note}</p>}
+                  </div>
+                </div>
+              </AnimateIn>
             </StaggerItem>
           ))}
         </StaggerChildren>
       </div>
+
+      {/* Resume link */}
+      <AnimateIn delay={0.1}>
+        <div className="mt-12">
+          <a
+            href="/mujeeb-resume.pdf"
+            download="Mujeeb-ur-Rahman-CV.pdf"
+            className="group inline-flex items-center font-inter font-medium leading-tight text-foreground"
+          >
+            View Full Résumé
+            <span className="ml-1 inline-block transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </AnimateIn>
     </section>
   )
 }

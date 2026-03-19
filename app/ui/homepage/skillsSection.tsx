@@ -5,7 +5,6 @@ import { SKILLS } from '@/app/lib/constant'
 import type { SkillCategory } from '@/app/lib/types'
 import { AnimateIn, StaggerChildren, StaggerItem } from '@/app/ui/animate-in'
 import { Card } from '@/app/ui/card'
-import { UnderLine } from '@/app/ui/underLine'
 import {
   SiAntdesign,
   SiBootstrap,
@@ -97,24 +96,16 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      aria-labelledby="skills-heading"
-      className="w-full max-w-6xl px-6 py-12"
+      aria-label="Skills"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
-      {/* Section heading */}
-      <AnimateIn>
-        <div className="mb-12 flex flex-col items-center gap-3 text-center">
-          <h2
-            id="skills-heading"
-            className="font-inter text-h2-u font-bold text-foreground"
-          >
-            Skills
-          </h2>
-          <UnderLine />
-        </div>
-      </AnimateIn>
+      {/* Sticky heading — mobile only */}
+      <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur-sm lg:sr-only">
+        <h2 className="font-inter text-sm font-bold uppercase tracking-widest text-foreground">Skills</h2>
+      </div>
 
-      {/* Category card grid: 1 col mobile, 2 col tablet, 3 col desktop */}
-      <StaggerChildren className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {/* Category card grid */}
+      <StaggerChildren className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {skillsByCategory.map(({ category, skills }) => (
           <StaggerItem key={category}>
             <Card className="p-6 transition-colors duration-200 hover:border-brand1/50">

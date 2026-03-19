@@ -7,7 +7,7 @@ import { Button } from '@/app/ui/button'
 import { Input } from '@/app/ui/input'
 import { Label } from '@/app/ui/label'
 import { Textarea } from '@/app/ui/textarea'
-import { UnderLine } from '@/app/ui/underLine'
+
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react'
 import { useState } from 'react'
@@ -82,20 +82,13 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      aria-labelledby="contact-heading"
-      className="w-full max-w-6xl px-6 py-12"
+      aria-label="Contact"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
-      <AnimateIn>
-        <div className="mb-12 flex flex-col items-center gap-3 text-center">
-          <h2
-            id="contact-heading"
-            className="font-inter text-h2-u font-bold text-foreground"
-          >
-            Contact
-          </h2>
-          <UnderLine />
-        </div>
-      </AnimateIn>
+      {/* Sticky heading — mobile only */}
+      <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur-sm lg:sr-only">
+        <h2 className="font-inter text-sm font-bold uppercase tracking-widest text-foreground">Contact</h2>
+      </div>
 
       <AnimateIn delay={0.1}>
         <div className="flex flex-col gap-10 md:flex-row">

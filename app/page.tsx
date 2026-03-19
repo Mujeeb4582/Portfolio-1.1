@@ -1,19 +1,26 @@
 import AboutSection from '@/app/ui/homepage/aboutSection'
 import { ContactSection } from '@/app/ui/homepage/contactSection'
 import ExperienceSection from '@/app/ui/homepage/experienceSection'
-import HeroSection from '@/app/ui/homepage/heroSection'
 import ProjectsSection from '@/app/ui/homepage/projectsSection'
 import SkillsSection from '@/app/ui/homepage/skillsSection'
+import SidebarNav from '@/app/ui/sidebar-nav'
 
 export default function Home() {
   return (
-    <main className="flex w-full flex-col items-center justify-center">
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <ContactSection />
-    </main>
+    <div className="mx-auto min-h-screen max-w-7xl px-6 md:px-12 lg:px-24">
+      <div className="lg:flex lg:justify-between lg:gap-4">
+        {/* Left: sticky sidebar with name, title, bio, nav, socials */}
+        <SidebarNav />
+
+        {/* Right: scrollable content */}
+        <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
+          <AboutSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <ContactSection />
+        </main>
+      </div>
+    </div>
   )
 }

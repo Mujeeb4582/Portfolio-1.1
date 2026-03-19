@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/app/ui/navbar'
+import MobileNav from '@/app/ui/mobile-nav'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ClientThemeProvider } from './ui/theme/clientThemeProvider'
 import { PERSONAL_INFO } from '@/app/lib/constant'
@@ -76,7 +76,7 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-inter`}
       >
         <ClientThemeProvider>
-          <Navbar />
+          <MobileNav />
           {children}
         </ClientThemeProvider>
       </body>

@@ -3,6 +3,7 @@
 // Skills with no SI icon render text-only with a placeholder square
 import { SKILLS } from '@/app/lib/constant'
 import type { SkillCategory } from '@/app/lib/types'
+import { AnimateIn, StaggerChildren, StaggerItem } from '@/app/ui/animate-in'
 import { Card } from '@/app/ui/card'
 import { UnderLine } from '@/app/ui/underLine'
 import {
@@ -95,54 +96,58 @@ export default function SkillsSection() {
       className="w-full max-w-6xl px-6 py-12"
     >
       {/* Section heading */}
-      <div className="mb-12 flex flex-col items-center gap-3 text-center">
-        <h2
-          id="skills-heading"
-          className="font-inter text-h2-u font-bold text-foreground"
-        >
-          Skills
-        </h2>
-        <UnderLine />
-      </div>
+      <AnimateIn>
+        <div className="mb-12 flex flex-col items-center gap-3 text-center">
+          <h2
+            id="skills-heading"
+            className="font-inter text-h2-u font-bold text-foreground"
+          >
+            Skills
+          </h2>
+          <UnderLine />
+        </div>
+      </AnimateIn>
 
       {/* Category card grid: 1 col mobile, 2 col tablet, 3 col desktop */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <StaggerChildren className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {skillsByCategory.map(({ category, skills }) => (
-          <Card key={category} className="p-6">
-            <h3 className="mb-4 font-inter text-button-u font-bold text-foreground">
-              {category}
-            </h3>
+          <StaggerItem key={category}>
+            <Card className="p-6 transition-colors duration-200 hover:border-brand1/50">
+              <h3 className="mb-4 font-inter text-button-u font-bold text-foreground">
+                {category}
+              </h3>
 
-            {/* Skill icon grid: 3 columns inside each card */}
-            <div className="grid grid-cols-3 gap-2">
-              {skills.map((skill) => {
-                const Icon = SKILL_ICON_MAP[skill.name]
-                return (
-                  <div
-                    key={skill.name}
-                    className="flex flex-col items-center gap-1"
-                  >
-                    {Icon ? (
-                      <Icon
-                        className="size-8 text-brand1"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <div
-                        className="size-8 rounded-sm bg-muted"
-                        aria-hidden="true"
-                      />
-                    )}
-                    <span className="text-center font-jetbrains text-code-m text-muted-foreground">
-                      {skill.name}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
-          </Card>
+              {/* Skill icon grid: 3 columns inside each card */}
+              <div className="grid grid-cols-3 gap-2">
+                {skills.map((skill) => {
+                  const Icon = SKILL_ICON_MAP[skill.name]
+                  return (
+                    <div
+                      key={skill.name}
+                      className="flex flex-col items-center gap-1"
+                    >
+                      {Icon ? (
+                        <Icon
+                          className="size-8 text-brand1"
+                          aria-hidden="true"
+                        />
+                      ) : (
+                        <div
+                          className="size-8 rounded-sm bg-muted"
+                          aria-hidden="true"
+                        />
+                      )}
+                      <span className="text-center font-jetbrains text-code-m text-muted-foreground">
+                        {skill.name}
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </Card>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerChildren>
     </section>
   )
 }

@@ -48,11 +48,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Projects Section
 
-- [ ] **PROJ-01**: 6 featured projects displayed with title, description, and tech stack badges
-- [ ] **PROJ-02**: Each project shows screenshot/preview image
-- [ ] **PROJ-03**: Each project links to live demo (if available) and/or GitHub repository
-- [ ] **PROJ-04**: Projects include: Buildable, MISA App, Uber-like App, Re-View, LSTN, WellShared
-- [ ] **PROJ-05**: Project cards differentiate between web and mobile projects visually
+- [x] **PROJ-01**: 6 featured projects displayed with title, description, and tech stack badges
+- [x] **PROJ-02**: Each project shows screenshot/preview image
+- [x] **PROJ-03**: Each project links to live demo (if available) and/or GitHub repository
+- [x] **PROJ-04**: Projects include: Buildable, MISA App, Uber-like App, Re-View, LSTN, WellShared
+- [x] **PROJ-05**: Project cards differentiate between web and mobile projects visually
 
 ### Experience Section
 
@@ -148,11 +148,11 @@ Deferred to future release. Tracked but not in current roadmap.
 | EXP-02 | Phase 2 | Complete |
 | EXP-03 | Phase 2 | Complete |
 | EXP-04 | Phase 2 | Complete |
-| PROJ-01 | Phase 3 | Pending |
-| PROJ-02 | Phase 3 | Pending |
-| PROJ-03 | Phase 3 | Pending |
-| PROJ-04 | Phase 3 | Pending |
-| PROJ-05 | Phase 3 | Pending |
+| PROJ-01 | Phase 3 | Complete |
+| PROJ-02 | Phase 3 | Complete |
+| PROJ-03 | Phase 3 | Complete |
+| PROJ-04 | Phase 3 | Complete |
+| PROJ-05 | Phase 3 | Complete |
 | NAV-01 | Phase 4 | Pending |
 | NAV-02 | Phase 4 | Pending |
 | NAV-03 | Phase 4 | Pending |

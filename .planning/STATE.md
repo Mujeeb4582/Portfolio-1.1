@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 3 UI-SPEC approved
-last_updated: "2026-03-18T20:21:13.155Z"
+stopped_at: Completed 03-projects-section-01-PLAN.md
+last_updated: "2026-03-19T09:50:31.242Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
   completed_phases: 2
-  total_plans: 10
-  completed_plans: 10
+  total_plans: 12
+  completed_plans: 11
   percent: 0
 ---
 
@@ -60,6 +60,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-core-sections P03 | 3 | 1 tasks | 1 files |
 | Phase 02-core-sections P04 | 3 | 1 tasks | 1 files |
 | Phase 02-core-sections PP05 | 8 | 2 tasks | 3 files |
+| Phase 03-projects-section P01 | 4 | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -93,6 +94,8 @@ Recent decisions affecting current work:
 - [Phase 02-core-sections]: SiNetlify confirmed in react-icons/si v5.6.0 and included in SKILL_ICON_MAP
 - [Phase 02-core-sections]: ExperienceSection is a Server Component (no use client) — purely presentational, all content from constants
 - [Phase 02-core-sections]: Fixed test EXP-01/EXP-02 bugs: getByText throws on multiple matches; used getAllByText for Microverse and React Native Developer per plan behavior spec
+- [Phase 03-projects-section]: 'use client' at file level for projectsSection.tsx — co-located sub-components in one file require single client boundary for onError state
+- [Phase 03-projects-section]: ActionLinks omits projectTitle prop — only liveUrl/githubUrl needed for rendering; unused prop removed to eliminate ESLint warning
 
 ### Pending Todos
 
@@ -107,6 +110,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T20:21:13.150Z
-Stopped at: Phase 3 UI-SPEC approved
-Resume file: .planning/phases/03-projects-section/03-UI-SPEC.md
+Last session: 2026-03-19T09:50:31.241Z
+Stopped at: Completed 03-projects-section-01-PLAN.md
+Resume file: None

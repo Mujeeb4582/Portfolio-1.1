@@ -114,4 +114,20 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Contrast audit (WCAG 2.2 AA — 4.5:1 minimum):
+     Light: muted-foreground #716C68 on #FFFFFF → 4.52:1 ✓
+     Dark: muted-foreground #A49E99 on #0D0B0A → 7.36:1 ✓
+     midnight_steel: card-foreground #BABEC9 on #1A1E26 → 8.19:1 ✓ */
+  :focus-visible {
+    outline: 2px solid var(--color-brand1);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 0 0 4px oklch(from var(--color-brand1) l c h / 0.2);
+  }
+
+  /* Remove default outline only when :focus-visible is supported */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
 }

@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 04-navigation-animations-01-PLAN.md
-last_updated: "2026-03-19T12:19:54.306Z"
+stopped_at: Completed 04-navigation-animations-03-PLAN.md
+last_updated: "2026-03-19T12:23:33.041Z"
 last_activity: 2026-03-18 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 17
-  completed_plans: 13
+  completed_plans: 15
   percent: 0
 ---
 
@@ -63,6 +63,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03-projects-section P01 | 4 | 1 tasks | 2 files |
 | Phase 03-projects-section P02 | 2 | 1 tasks | 1 files |
 | Phase 04-navigation-animations P01 | 5 | 2 tasks | 9 files |
+| Phase 04-navigation-animations P03 | 4 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -102,6 +103,7 @@ Recent decisions affecting current work:
 - [Phase 03-projects-section]: ProjectsSection added after ExperienceSection in app/page.tsx — wiring was a 2-line change
 - [Phase 04-navigation-animations]: IntersectionObserver mock uses class syntax (vi.fn().mockImplementation(class{...})) in setup.ts — Vitest 4.x requires class syntax not mockReturnValue for constructor mocks
 - [Phase 04-navigation-animations]: matchMedia mock added to tests/setup.ts globally — next-themes ThemeProvider calls window.matchMedia internally, jsdom does not provide it
+- [Phase 04-navigation-animations]: animate-in.tsx uses 'use client' at file top — motion/react requires client boundary; StaggerItem inherits variants from StaggerChildren parent via Motion variant propagation
 
 ### Pending Todos
 
@@ -116,6 +118,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T12:19:54.304Z
-Stopped at: Completed 04-navigation-animations-01-PLAN.md
+Last session: 2026-03-19T12:23:20.041Z
+Stopped at: Completed 04-navigation-animations-03-PLAN.md
 Resume file: None

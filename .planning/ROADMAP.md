@@ -67,7 +67,11 @@ Plans:
   2. Each project card shows a screenshot or preview image
   3. Each project has working links to live demo and/or GitHub repository where available
   4. Web and mobile projects are visually distinguishable from each other
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Build projectsSection.tsx: BrowserFrame + PhoneFrame + ProjectCard + FeaturedProjectCard (PROJ-01 to PROJ-05)
+- [ ] 03-02-PLAN.md — Tests + page wiring + visual checkpoint (PROJ-01 to PROJ-05)
 
 ### Phase 4: Navigation + Animations
 **Goal**: Users can navigate the portfolio smoothly from any device, the active section is clearly indicated, and section content enters with subtle, accessible animations
@@ -112,7 +116,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-03-18 |
 | 2. Core Sections | 5/5 | Complete   | 2026-03-18 |
-| 3. Projects Section | 0/TBD | Not started | - |
+| 3. Projects Section | 0/2 | Not started | - |
 | 4. Navigation + Animations | 0/TBD | Not started | - |
 | 5. Contact Form | 0/TBD | Not started | - |
 | 6. SEO + Accessibility + Launch | 0/TBD | Not started | - |
@@ -122,3 +126,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 *Requirements coverage: 47/47 v1 requirements mapped*
 *Phase 1 planned: 2026-03-18 — 4 plans across 3 waves*
 *Phase 2 planned: 2026-03-18 — 5 plans across 3 waves*
+*Phase 3 planned: 2026-03-19 — 2 plans across 2 waves*

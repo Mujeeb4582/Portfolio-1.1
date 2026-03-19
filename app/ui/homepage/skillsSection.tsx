@@ -7,6 +7,7 @@ import { AnimateIn, StaggerChildren, StaggerItem } from '@/app/ui/animate-in'
 import { Card } from '@/app/ui/card'
 import { UnderLine } from '@/app/ui/underLine'
 import {
+  SiAntdesign,
   SiBootstrap,
   SiCss,
   SiCypress,
@@ -15,6 +16,7 @@ import {
   SiFirebase,
   SiGit,
   SiGithub,
+  SiGooglegemini,
   SiHtml5,
   SiJavascript,
   SiMongodb,
@@ -27,28 +29,31 @@ import {
   SiPython,
   SiReact,
   SiRedux,
+  SiRender,
   SiRuby,
   SiRubyonrails,
+  SiShadcnui,
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si'
+import { Bot, BrainCircuit, Cloud, FlaskConical, MessageSquareCode, TestTubeDiagonal } from 'lucide-react'
 import type { IconType } from 'react-icons'
+import type { LucideIcon } from 'lucide-react'
 
 // Static icon map keyed by exact skill name from constant.ts
-// Skills not listed here render text-only (graceful fallback)
-const SKILL_ICON_MAP: Partial<Record<string, IconType>> = {
+const SKILL_ICON_MAP: Partial<Record<string, IconType | LucideIcon>> = {
   'React': SiReact,
   'Next.js': SiNextdotjs,
   'TypeScript': SiTypescript,
   'JavaScript': SiJavascript,
   'HTML5': SiHtml5,
-  'CSS3': SiCss, // SiCss3 not in v5.6.0; SiCss is the correct export
+  'CSS3': SiCss,
   'TailwindCSS': SiTailwindcss,
   'Redux': SiRedux,
   'Bootstrap': SiBootstrap,
-  // shadcn/ui — no SI icon; text-only fallback
-  // Ant Design — no SI icon; text-only fallback
+  'shadcn/ui': SiShadcnui,
+  'Ant Design': SiAntdesign,
   'Node.js': SiNodedotjs,
   'PostgreSQL': SiPostgresql,
   'Ruby on Rails': SiRubyonrails,
@@ -58,20 +63,20 @@ const SKILL_ICON_MAP: Partial<Record<string, IconType>> = {
   'MySQL': SiMysql,
   'MongoDB': SiMongodb,
   'Python': SiPython,
-  // AWS — no SI icon in v5.6.0; text-only fallback
+  'AWS': Cloud,
   'Ruby': SiRuby,
-  'React Native': SiReact, // no dedicated RN icon in SI
+  'React Native': SiReact,
   'OpenAI API': SiOpenai,
-  // Gemini API — no SI icon; text-only fallback
-  // LiteLLM — no SI icon; text-only fallback
-  // Langfuse — no SI icon; text-only fallback
-  // Prompt Engineering — no SI icon; text-only fallback
+  'Gemini API': SiGooglegemini,
+  'LiteLLM': Bot,
+  'Langfuse': BrainCircuit,
+  'Prompt Engineering': MessageSquareCode,
   'Git': SiGit,
   'GitHub': SiGithub,
   'Docker': SiDocker,
   'Cypress': SiCypress,
-  // TDD — no SI icon; text-only fallback
-  // Render — no SI icon; text-only fallback
+  'TDD': TestTubeDiagonal,
+  'Render': SiRender,
   'Netlify': SiNetlify,
 }
 
@@ -133,9 +138,11 @@ export default function SkillsSection() {
                         />
                       ) : (
                         <div
-                          className="size-8 rounded-sm bg-muted"
+                          className="flex size-8 items-center justify-center rounded-sm bg-muted text-xs font-bold text-muted-foreground"
                           aria-hidden="true"
-                        />
+                        >
+                          {skill.name.charAt(0)}
+                        </div>
                       )}
                       <span className="text-center font-jetbrains text-code-m text-muted-foreground">
                         {skill.name}

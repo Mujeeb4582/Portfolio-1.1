@@ -14,25 +14,25 @@
   --color-grey: #43454D;
   --color-white: #FFFFFF;
 
-  /* shadcn/ui semantic tokens — light theme defaults */
+  /* shadcn/ui semantic tokens — light theme (cool slate palette for cyan accent) */
   --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(20 14.3% 4.1%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(20 14.3% 4.1%);
+  --color-foreground: hsl(222 47% 11%);
+  --color-card: hsl(210 20% 98%);
+  --color-card-foreground: hsl(222 47% 11%);
   --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(20 14.3% 4.1%);
-  --color-primary: hsl(24 9.8% 10%);
-  --color-primary-foreground: hsl(60 9.1% 97.8%);
-  --color-secondary: hsl(60 4.8% 95.9%);
-  --color-secondary-foreground: hsl(24 9.8% 10%);
-  --color-muted: hsl(60 4.8% 95.9%);
-  --color-muted-foreground: hsl(25 5.3% 44.7%);
-  --color-accent: hsl(60 4.8% 95.9%);
-  --color-accent-foreground: hsl(24 9.8% 10%);
+  --color-popover-foreground: hsl(222 47% 11%);
+  --color-primary: hsl(222 47% 11%);
+  --color-primary-foreground: hsl(210 40% 98%);
+  --color-secondary: hsl(210 40% 96%);
+  --color-secondary-foreground: hsl(222 47% 11%);
+  --color-muted: hsl(210 40% 96%);
+  --color-muted-foreground: hsl(215 16% 47%);
+  --color-accent: hsl(210 40% 96%);
+  --color-accent-foreground: hsl(222 47% 11%);
   --color-destructive: hsl(0 84.2% 60.2%);
-  --color-border: hsl(20 5.9% 90%);
-  --color-input: hsl(20 5.9% 90%);
-  --color-ring: hsl(20 14.3% 4.1%);
+  --color-border: hsl(214 20% 90%);
+  --color-input: hsl(214 20% 90%);
+  --color-ring: hsl(222 47% 11%);
 
   /* Font variables — CSS variable references injected by next/font/google */
   --font-inter: var(--font-inter-variable), 'Inter', sans-serif;
@@ -116,7 +116,7 @@
   }
 
   /* Contrast audit (WCAG 2.2 AA — 4.5:1 minimum):
-     Light: muted-foreground #716C68 on #FFFFFF → 4.52:1 ✓
+     Light: muted-foreground hsl(215 16% 47%) on #FFFFFF → 4.6:1 ✓
      Dark: muted-foreground #A49E99 on #0D0B0A → 7.36:1 ✓
      midnight_steel: card-foreground #BABEC9 on #1A1E26 → 8.19:1 ✓ */
   :focus-visible {

@@ -83,7 +83,7 @@ export default function ContactSection() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="w-full max-w-4xl px-6 py-12"
+      className="w-full max-w-6xl px-6 py-12"
     >
       <AnimateIn>
         <div className="mb-12 flex flex-col items-center gap-3 text-center">

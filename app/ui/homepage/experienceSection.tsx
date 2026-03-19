@@ -10,7 +10,7 @@ export default function ExperienceSection() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="w-full max-w-4xl px-6 py-12"
+      className="w-full max-w-6xl px-6 py-12"
     >
       {/* Section heading */}
       <AnimateIn>

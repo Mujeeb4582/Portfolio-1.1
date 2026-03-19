@@ -1,6 +1,7 @@
 // heroSection.tsx — rebuilt for Phase 2 split layout design
 // Profile photo: /profile.jpg (placeholder until real photo provided — copy of aboutImage.png)
 import { PERSONAL_INFO } from '@/app/lib/constant'
+import { AnimateIn } from '@/app/ui/animate-in'
 import { Button } from '@/app/ui/button'
 import { Download, Github, Linkedin, Mail, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
@@ -41,7 +42,7 @@ export default function HeroSection() {
       className="flex min-h-screen w-full max-w-6xl flex-col items-center gap-12 px-6 py-20 md:flex-row md:items-center md:justify-between"
     >
       {/* Left: text content */}
-      <div className="flex flex-col gap-6">
+      <AnimateIn className="flex flex-col gap-6">
         <p className="font-jetbrains text-code-m text-brand1">Hi, my name is</p>
 
         <div>
@@ -97,10 +98,10 @@ export default function HeroSection() {
             </Link>
           ))}
         </div>
-      </div>
+      </AnimateIn>
 
       {/* Right: professional photo */}
-      <div className="relative shrink-0 overflow-hidden rounded-2xl border-2 border-brand1 shadow-[0_0_24px_rgba(18,247,214,0.25)]">
+      <AnimateIn delay={0.2} className="relative shrink-0 overflow-hidden rounded-2xl border-2 border-brand1 shadow-[0_0_24px_rgba(18,247,214,0.25)]">
         <Image
           src="/profile.jpg"
           alt="Mujeeb ur Rahman — Full-Stack Web Developer"
@@ -109,7 +110,7 @@ export default function HeroSection() {
           className="object-cover"
           priority
         />
-      </div>
+      </AnimateIn>
     </section>
   )
 }

@@ -12,6 +12,8 @@ export default function Home() {
       <SkillsSection />
       <ExperienceSection />
       <ProjectsSection />
+      {/* Contact placeholder — Phase 5 will replace this with the full ContactSection */}
+      <section id="contact" aria-label="Contact" className="w-full py-12" />
     </main>
   )
 }

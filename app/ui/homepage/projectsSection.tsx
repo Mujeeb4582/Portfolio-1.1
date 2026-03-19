@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Github, ExternalLink } from 'lucide-react'
 import { PROJECTS } from '@/app/lib/constant'
 import type { Project } from '@/app/lib/types'
+import { AnimateIn, StaggerChildren, StaggerItem } from '@/app/ui/animate-in'
 import { Card } from '@/app/ui/card'
 import { Button } from '@/app/ui/button'
 import { UnderLine } from '@/app/ui/underLine'
@@ -170,7 +171,7 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <Card
       className={cn(
-        'border border-border hover:border-brand1 transition-colors duration-200 flex flex-col'
+        'border border-border hover:border-brand1 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col'
       )}
     >
       {/* Device frame at top */}
@@ -232,7 +233,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
   return (
     <Card
       className={cn(
-        'border border-border border-t-2 border-t-brand1 hover:border-brand1 transition-colors duration-200 flex flex-col md:flex-row overflow-hidden'
+        'border border-border border-t-2 border-t-brand1 hover:border-brand1 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col md:flex-row overflow-hidden'
       )}
     >
       {/* Screenshot side */}
@@ -286,27 +287,31 @@ export default function ProjectsSection() {
       className="w-full max-w-6xl px-6 py-12"
     >
       {/* Section heading */}
-      <div className="mb-12 flex flex-col items-center gap-3 text-center">
-        <h2
-          id="projects-heading"
-          className="font-inter text-h2-u font-bold text-foreground"
-        >
-          Projects
-        </h2>
-        <UnderLine />
-      </div>
+      <AnimateIn>
+        <div className="mb-12 flex flex-col items-center gap-3 text-center">
+          <h2
+            id="projects-heading"
+            className="font-inter text-h2-u font-bold text-foreground"
+          >
+            Projects
+          </h2>
+          <UnderLine />
+        </div>
+      </AnimateIn>
 
       {/* Featured project (Buildable) */}
-      <div className="mb-8">
+      <AnimateIn delay={0.1} className="mb-8">
         <FeaturedProjectCard project={PROJECTS[0]} />
-      </div>
+      </AnimateIn>
 
       {/* Projects grid — remaining 5 projects */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <StaggerChildren className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {PROJECTS.slice(1).map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <StaggerItem key={project.title}>
+            <ProjectCard project={project} />
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerChildren>
     </section>
   )
 }

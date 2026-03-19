@@ -126,11 +126,9 @@ function PhoneFrame({
 function ActionLinks({
   liveUrl,
   githubUrl,
-  projectTitle,
 }: {
   liveUrl?: string
   githubUrl?: string
-  projectTitle: string
 }) {
   if (!liveUrl && !githubUrl) return null
 
@@ -217,7 +215,6 @@ function ProjectCard({ project }: { project: Project }) {
           <ActionLinks
             liveUrl={project.liveUrl}
             githubUrl={project.githubUrl}
-            projectTitle={project.title}
           />
         </div>
       </div>
@@ -271,7 +268,6 @@ function FeaturedProjectCard({ project }: { project: Project }) {
         <ActionLinks
           liveUrl={project.liveUrl}
           githubUrl={project.githubUrl}
-          projectTitle={project.title}
         />
       </div>
     </Card>

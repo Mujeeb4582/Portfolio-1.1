@@ -65,6 +65,7 @@ function BrowserFrame({
             alt={`${projectTitle} — web application screenshot`}
             fill
             className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
             loading="lazy"
             onError={onImageError}
           />
@@ -110,6 +111,7 @@ function PhoneFrame({
               alt={`${projectTitle} — mobile application screenshot`}
               fill
               className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 50vw, 280px"
               loading="lazy"
               onError={onImageError}
             />

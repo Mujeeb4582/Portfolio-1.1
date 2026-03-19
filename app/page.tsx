@@ -1,4 +1,5 @@
 import AboutSection from '@/app/ui/homepage/aboutSection'
+import { ContactSection } from '@/app/ui/homepage/contactSection'
 import ExperienceSection from '@/app/ui/homepage/experienceSection'
 import HeroSection from '@/app/ui/homepage/heroSection'
 import ProjectsSection from '@/app/ui/homepage/projectsSection'
@@ -12,8 +13,7 @@ export default function Home() {
       <SkillsSection />
       <ExperienceSection />
       <ProjectsSection />
-      {/* Contact placeholder — Phase 5 will replace this with the full ContactSection */}
-      <section id="contact" aria-label="Contact" className="w-full py-12" />
+      <ContactSection />
     </main>
   )
 }

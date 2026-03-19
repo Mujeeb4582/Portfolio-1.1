@@ -117,7 +117,13 @@ Plans:
   2. Lighthouse reports 90+ on Performance, Accessibility, Best Practices, and SEO
   3. All interactive elements are reachable and operable using keyboard-only navigation with visible focus indicators
   4. The portfolio is live at a Vercel URL and auto-deploys on push to main
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Metadata, OG image, JSON-LD Person schema, robots.txt, sitemap.xml (SEO-01, SEO-02, SEO-03)
+- [ ] 06-02-PLAN.md — Accessibility audit: focus indicators, heading hierarchy, ARIA landmarks, contrast (A11Y-01, A11Y-02, A11Y-03, A11Y-04)
+- [ ] 06-03-PLAN.md — Image optimization: next/image audit in projectsSection, next.config.ts WebP config (SEO-04, SEO-05)
+- [ ] 06-04-PLAN.md — Vercel deploy + Lighthouse 90+ checkpoint (SEO-04, DEPLOY-01)
 
 ## Progress
 
@@ -131,7 +137,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Projects Section | 2/2 | Complete   | 2026-03-19 |
 | 4. Navigation + Animations | 5/5 | Complete   | 2026-03-19 |
 | 5. Contact Form | 3/3 | Complete   | 2026-03-19 |
-| 6. SEO + Accessibility + Launch | 0/TBD | Not started | - |
+| 6. SEO + Accessibility + Launch | 0/4 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-18*
@@ -141,3 +147,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 *Phase 3 planned: 2026-03-19 — 2 plans across 2 waves*
 *Phase 4 planned: 2026-03-19 — 5 plans across 4 waves*
 *Phase 5 planned: 2026-03-19 — 3 plans across 3 waves*
+*Phase 6 planned: 2026-03-20 — 4 plans across 3 waves*

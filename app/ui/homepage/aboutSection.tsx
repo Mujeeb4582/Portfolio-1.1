@@ -11,7 +11,6 @@ export default function AboutSection() {
       <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur-sm lg:sr-only">
         <h2 className="text-sm font-bold uppercase tracking-widest text-foreground">About</h2>
       </div>
-
       <AnimateIn>
         <div className="space-y-4">
           <p className="text-base leading-relaxed text-muted-foreground">

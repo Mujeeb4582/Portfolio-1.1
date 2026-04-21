@@ -14,7 +14,7 @@ provides:
   - Shared schema importable from both client component and API route
   - shadcn Textarea component styled consistently with Input
   - RED-phase test scaffold covering CONT-01 through CONT-05 (11 tests)
-  - RESEND_API_KEY env placeholder in .env.local
+  - RESEND_API_KEY env placeholder in .env.example
   - null stub contactSection.tsx for RED-phase import resolution
 
 affects: [05-contact-form Plan 02, app/api/contact/route.ts, app/ui/homepage/contactSection.tsx]
@@ -37,7 +37,7 @@ key-files:
     - app/ui/textarea.tsx
     - app/ui/homepage/contactSection.tsx
     - tests/contact.test.tsx
-    - .env.local
+    - .env.example
   modified:
     - package.json
     - bun.lock
@@ -46,7 +46,7 @@ key-decisions:
   - "contactSchema defined in app/lib/schemas/contact.ts (shared module) — eliminates duplicated validation between client form and API route"
   - "contactSection.tsx null stub created for RED-phase import resolution — Vite import-analysis runs before test runtime, so module must exist for schema tests to be GREEN"
   - "@testing-library/user-event added as missing dev dep — required by test scaffold; not in original devDependencies"
-  - "RESEND_API_KEY left empty in .env.local — real key requires resend.com/api-keys; onboarding@resend.dev is only valid from address on free tier before domain verification"
+  - "RESEND_API_KEY placeholder lives in .env.example (tracked); developers copy to untracked .env.local and fill in a real key from resend.com/api-keys. onboarding@resend.dev is only valid from address on free tier before domain verification"
 
 patterns-established:
   - "Shared schema pattern: app/lib/schemas/{feature}.ts exports both schema and inferred type — both client and server import from this single file"
@@ -89,7 +89,7 @@ Each task was committed atomically:
 - `app/ui/textarea.tsx` — shadcn Textarea component (mirrors Input structure with cn() utility)
 - `app/ui/homepage/contactSection.tsx` — null stub for RED-phase import resolution (Plan 02 replaces this)
 - `tests/contact.test.tsx` — 11 tests: 5 schema (GREEN) + 6 component (RED), covers CONT-01 to CONT-05
-- `.env.local` — Created with `RESEND_API_KEY=` placeholder
+- `.env.example` — Added `RESEND_API_KEY=` placeholder (tracked); developers copy to `.env.local` locally
 - `package.json` — Added react-hook-form, @hookform/resolvers, zod, resend, @testing-library/user-event
 - `bun.lock` — Updated lockfile
 
@@ -97,7 +97,7 @@ Each task was committed atomically:
 
 - `contactSection.tsx` null stub created so Vite's `import-analysis` plugin can resolve the import at build time — without the stub, schema tests cannot run even though the schema file exists
 - `@testing-library/user-event` added as dev dep (was missing from the project despite being needed by tests referencing userEvent interactions)
-- `.env.local` file did not exist before this plan; created fresh with just `RESEND_API_KEY=` placeholder
+- `.env.example` tracks the `RESEND_API_KEY=` placeholder; `.env.local` remains untracked so secrets never land in the repo
 
 ## Deviations from Plan
 
@@ -132,7 +132,7 @@ None beyond the two auto-fixed blocking issues documented above.
 
 **RESEND_API_KEY must be configured before Plan 02 integration testing:**
 1. Go to [resend.com/api-keys](https://resend.com/api-keys) and generate an API key
-2. Add the key to `.env.local`: `RESEND_API_KEY=re_xxxxxxxxxxxx`
+2. Copy `.env.example` to `.env.local` and set: `RESEND_API_KEY=re_xxxxxxxxxxxx`
 3. Note: `onboarding@resend.dev` is the only valid `from` address on free tier before domain verification (tracked as a Phase 6 pre-launch blocker in STATE.md)
 
 ## Next Phase Readiness
@@ -141,7 +141,7 @@ None beyond the two auto-fixed blocking issues documented above.
 - `contactSchema` is importable from `@/app/lib/schemas/contact` in both client and server code
 - `Textarea` component is available at `@/app/ui/textarea`
 - All 6 component tests are RED and ready to turn GREEN as Plan 02 implements the real component
-- RESEND_API_KEY placeholder exists in `.env.local` — developer must fill in real key before email delivery works
+- RESEND_API_KEY placeholder exists in `.env.example` — developer copies to `.env.local` and fills in real key before email delivery works
 
 ---
 *Phase: 05-contact-form*

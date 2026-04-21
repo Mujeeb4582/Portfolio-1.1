@@ -1,4 +1,28 @@
+import { ABOUT_PARAGRAPHS } from '@/app/lib/constant'
+import type { AboutSegment } from '@/app/lib/types'
 import { AnimateIn } from '@/app/ui/animate-in'
+
+const HIGHLIGHT_CLASS = 'text-foreground font-medium'
+const LINK_CLASS = `${HIGHLIGHT_CLASS} hover:text-brand1 transition-colors`
+
+function Segment({ segment }: { segment: AboutSegment }) {
+  if (segment.href) {
+    return (
+      <a
+        href={segment.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={LINK_CLASS}
+      >
+        {segment.text}
+      </a>
+    )
+  }
+  if (segment.highlight) {
+    return <span className={HIGHLIGHT_CLASS}>{segment.text}</span>
+  }
+  return <>{segment.text}</>
+}
 
 export default function AboutSection() {
   return (
@@ -13,31 +37,13 @@ export default function AboutSection() {
       </div>
       <AnimateIn>
         <div className="space-y-4">
-          <p className="text-base leading-relaxed text-muted-foreground">
-            Back in 2020, I dove headfirst into web development and discovered a passion for
-            turning complex problems into elegant, user-friendly interfaces. Fast-forward to today,
-            and I&apos;ve had the privilege of building software for a{' '}
-            <span className="text-foreground font-medium">real estate analytics platform</span>, a{' '}
-            <span className="text-foreground font-medium">government enterprise app</span>, and several{' '}
-            <span className="text-foreground font-medium">startups</span>.
-          </p>
-
-          <p className="text-base leading-relaxed text-muted-foreground">
-            My main focus these days is building accessible, pixel-perfect products at{' '}
-            <a href="https://wondercrafts.com" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-brand1 transition-colors">
-              Wonder Crafts
-            </a>
-            , where I work on AI-powered tools that help real estate professionals make data-driven
-            decisions. I enjoy building things that live at the intersection of design and engineering —
-            products that look great and are built with solid, maintainable code.
-          </p>
-
-          <p className="text-base leading-relaxed text-muted-foreground">
-            When I&apos;m not at the computer, I&apos;m usually exploring new technologies,
-            contributing to open-source, or experimenting with{' '}
-            <span className="text-foreground font-medium">LLM integrations</span> and{' '}
-            <span className="text-foreground font-medium">agentic AI workflows</span>.
-          </p>
+          {ABOUT_PARAGRAPHS.map((paragraph, i) => (
+            <p key={i} className="text-base leading-relaxed text-muted-foreground">
+              {paragraph.map((segment, j) => (
+                <Segment key={j} segment={segment} />
+              ))}
+            </p>
+          ))}
         </div>
       </AnimateIn>
     </section>

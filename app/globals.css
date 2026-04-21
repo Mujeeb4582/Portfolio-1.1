@@ -5,6 +5,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Font tokens resolve a var chain (next/font → Tailwind token), which requires `@theme inline` */
+@theme inline {
+  --font-inter: var(--font-inter-variable), 'Inter', sans-serif;
+  --font-jetbrains: var(--font-jetbrains-variable), 'JetBrains Mono', monospace;
+}
+
 @theme {
   /* Brand colors (locked decisions — do NOT change) */
   --color-brand1: #12F7D6;
@@ -33,10 +39,6 @@
   --color-border: hsl(214 20% 90%);
   --color-input: hsl(214 20% 90%);
   --color-ring: hsl(222 47% 11%);
-
-  /* Font variables — CSS variable references injected by next/font/google */
-  --font-inter: var(--font-inter-variable), 'Inter', sans-serif;
-  --font-jetbrains: var(--font-jetbrains-variable), 'JetBrains Mono', monospace;
 
   /* Border radius */
   --radius: 0.5rem;

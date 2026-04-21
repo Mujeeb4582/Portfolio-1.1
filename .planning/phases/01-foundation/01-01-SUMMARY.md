@@ -63,7 +63,7 @@ Migrated from pnpm to bun, upgraded Next.js 15→16.1.7 and React 18→19.2.4, r
 ## Installed Versions (bun pm ls)
 
 ```
-/Users/engr.mujeeburrahman/personal-project/Portfolio-1.1 node_modules (529)
+ node_modules (529)
 ├── next@16.1.7
 ├── react@19.2.4
 ├── react-dom@19.2.4

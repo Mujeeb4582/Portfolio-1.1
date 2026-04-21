@@ -85,7 +85,7 @@ Each task was committed atomically:
 None - plan executed exactly as written. The implementation matches the `<action>` code block verbatim.
 
 ## Issues Encountered
-- `bun test --run tests/animate-in.test.tsx` threw `document is not defined` because it uses Bun's native runner (no jsdom). All other tests in the project use `bunx vitest run` — verified tests pass with the correct command (3/3 pass).
+- `bun run test -- --run tests/animate-in.test.tsx` threw `document is not defined` because it uses Bun's native runner (no jsdom). All other tests in the project use `bunx vitest run` — verified tests pass with the correct command (3/3 pass).
 
 ## User Setup Required
 

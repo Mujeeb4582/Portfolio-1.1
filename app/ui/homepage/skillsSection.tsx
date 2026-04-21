@@ -35,7 +35,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si'
-import { Bot, BrainCircuit, Cloud, FlaskConical, MessageSquareCode, TestTubeDiagonal } from 'lucide-react'
+import { Bot, BrainCircuit, Cloud, MessageSquareCode, TestTubeDiagonal } from 'lucide-react'
 import type { IconType } from 'react-icons'
 import type { LucideIcon } from 'lucide-react'
 

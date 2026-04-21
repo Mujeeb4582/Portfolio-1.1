@@ -69,3 +69,11 @@ export interface NavLink {
   label: string
   href: string
 }
+
+export interface AboutSegment {
+  text: string
+  highlight?: boolean
+  href?: string
+}
+
+export type AboutParagraph = AboutSegment[]

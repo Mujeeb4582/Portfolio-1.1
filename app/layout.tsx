@@ -8,16 +8,17 @@ import { PERSONAL_INFO } from '@/app/lib/constant'
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-inter-variable',
 })
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-jetbrains',
+  variable: '--font-jetbrains-variable',
   weight: ['400', '500', '700'],
 })
 
-const metadataBase = new URL('https://mujeeb.vercel.app')
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mujeeb.vercel.app'
+const metadataBase = new URL(SITE_URL)
 const title = `${PERSONAL_INFO.name} | ${PERSONAL_INFO.title}`
 const description = PERSONAL_INFO.bio.slice(0, 160)
 
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: 'https://mujeeb.vercel.app',
+    url: SITE_URL,
     siteName: PERSONAL_INFO.name,
     images: [
       {
@@ -54,7 +55,7 @@ const jsonLd = {
   name: PERSONAL_INFO.name,
   jobTitle: PERSONAL_INFO.title,
   email: PERSONAL_INFO.email,
-  url: 'https://mujeeb.vercel.app',
+  url: SITE_URL,
   sameAs: [PERSONAL_INFO.github, PERSONAL_INFO.linkedIn],
 }
 

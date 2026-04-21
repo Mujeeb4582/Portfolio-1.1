@@ -1,5 +1,6 @@
 import { CSSIcon, HTMLIcon, JSIcon, ReactIcon } from '@/app/ui/svgs'
 import type {
+  AboutParagraph,
   Education,
   Experience,
   NavLink,
@@ -26,6 +27,34 @@ export const PERSONAL_INFO: PersonalInfo = {
     technologiesUsed: 20,
   },
 }
+
+// ---------------------------------------------------------------------------
+// About
+// ---------------------------------------------------------------------------
+
+export const ABOUT_PARAGRAPHS: AboutParagraph[] = [
+  [
+    { text: 'Back in 2020, I dove headfirst into web development and discovered a passion for turning complex problems into elegant, user-friendly interfaces. Fast-forward to today, and I’ve had the privilege of building software for a ' },
+    { text: 'real estate analytics platform', highlight: true },
+    { text: ', a ' },
+    { text: 'government enterprise app', highlight: true },
+    { text: ', and several ' },
+    { text: 'startups', highlight: true },
+    { text: '.' },
+  ],
+  [
+    { text: 'My main focus these days is building accessible, pixel-perfect products at ' },
+    { text: 'Wonder Crafts', highlight: true, href: 'https://wondercrafts.com' },
+    { text: ', where I work on AI-powered tools that help real estate professionals make data-driven decisions. I enjoy building things that live at the intersection of design and engineering — products that look great and are built with solid, maintainable code.' },
+  ],
+  [
+    { text: 'When I’m not at the computer, I’m usually exploring new technologies, contributing to open-source, or experimenting with ' },
+    { text: 'LLM integrations', highlight: true },
+    { text: ' and ' },
+    { text: 'agentic AI workflows', highlight: true },
+    { text: '.' },
+  ],
+]
 
 // ---------------------------------------------------------------------------
 // Projects

@@ -592,7 +592,7 @@ import { AnimatePresence, motion } from 'motion/react'
 | NAV-01 | Navbar renders all NAV_LINKS as anchor links | unit | `bun test --run tests/navbar.test.tsx` | ❌ Wave 0 |
 | NAV-02 | Hamburger button present; mobile menu links rendered | unit | `bun test --run tests/navbar.test.tsx` | ❌ Wave 0 |
 | NAV-03 | Active section class applied to matching link | unit (mock IntersectionObserver) | `bun test --run tests/navbar.test.tsx` | ❌ Wave 0 |
-| ANIM-01 | AnimateIn wrapper renders children without error | unit | `bun test --run tests/animate-in.test.tsx` | ❌ Wave 0 |
+| ANIM-01 | AnimateIn wrapper renders children without error | unit | `bun run test -- --run tests/animate-in.test.tsx` | ❌ Wave 0 |
 | ANIM-02 | Hover classes present on interactive elements | unit (check className) | `bun test --run tests/navbar.test.tsx` | ❌ Wave 0 |
 | ANIM-03 | MotionConfig with reducedMotion="user" present in provider | unit | `bun test --run tests/providers.test.tsx` | ❌ Wave 0 |
 | DEPLOY-02 | Section IDs exist for all NAV_LINKS hrefs | unit | `bun test --run tests/sections.test.tsx` | ❌ Wave 0 |

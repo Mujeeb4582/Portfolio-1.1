@@ -1,7 +1,7 @@
 import AboutSection from '@/app/ui/homepage/aboutSection'
-import { ContactSection } from '@/app/ui/homepage/contactSection'
 import ExperienceSection from '@/app/ui/homepage/experienceSection'
 import ProjectsSection from '@/app/ui/homepage/projectsSection'
+import SiteFooter from '@/app/ui/homepage/siteFooter'
 import SkillsSection from '@/app/ui/homepage/skillsSection'
 import SidebarNav from '@/app/ui/sidebar-nav'
 
@@ -18,7 +18,7 @@ export default function Home() {
           <SkillsSection />
           <ExperienceSection />
           <ProjectsSection />
-          <ContactSection />
+          <SiteFooter />
         </main>
       </div>
     </div>

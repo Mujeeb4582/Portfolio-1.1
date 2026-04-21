@@ -28,16 +28,8 @@ export function useActiveSection(): string {
 
     sections.forEach((section) => observer.observe(section))
 
-    // Also detect when user is near page bottom (for Contact)
-    const handleScroll = () => {
-      const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100
-      if (atBottom) setActiveSection('contact')
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-
     return () => {
       observer.disconnect()
-      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 

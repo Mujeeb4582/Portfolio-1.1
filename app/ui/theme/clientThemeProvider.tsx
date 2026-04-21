@@ -1,32 +1,24 @@
 'use client'
+import { useState, useEffect } from 'react'
+import { ThemeProvider } from 'next-themes'
+import { MotionConfig } from 'motion/react'
 
-import { ThemeProvider } from '@/app/ui/theme/theme-provider'
-import { useEffect, useState } from 'react'
-
-export function ClientThemeProvider({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export function ClientThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return <>{children}</> // Prevent hydration mismatch
-  }
-
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { setMounted(true) }, [])
+  if (!mounted) return <>{children}</>
   return (
     <ThemeProvider
       attribute="class"
       defaultTheme="midnight_steel"
-      enableSystem
+      enableSystem={false}
       themes={['light', 'dark', 'midnight_steel']}
       disableTransitionOnChange
     >
-      {children}
+      <MotionConfig reducedMotion="user">
+        {children}
+      </MotionConfig>
     </ThemeProvider>
   )
 }

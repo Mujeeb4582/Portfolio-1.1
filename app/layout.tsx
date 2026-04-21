@@ -1,36 +1,62 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import './globals.css'
-import Navbar from '@/app/ui/navbar'
-import { IBM_Plex_Mono, Ubuntu } from 'next/font/google'
+import MobileNav from '@/app/ui/mobile-nav'
+
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ClientThemeProvider } from './ui/theme/clientThemeProvider'
+import { PERSONAL_INFO } from '@/app/lib/constant'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-})
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-})
-
-const ubuntu = Ubuntu({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-ubuntu',
-  weight: '400',
+  variable: '--font-inter-variable',
 })
 
-const ibmPlexMono = IBM_Plex_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-ibm-plex-mono',
-  weight: '400',
+  variable: '--font-jetbrains-variable',
+  weight: ['400', '500', '700'],
 })
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mujeeb.vercel.app'
+const metadataBase = new URL(SITE_URL)
+const title = `${PERSONAL_INFO.name} | ${PERSONAL_INFO.title}`
+const description = PERSONAL_INFO.bio.slice(0, 160)
 
 export const metadata: Metadata = {
-  title: 'Mujeeb Portfolio',
-  description: 'Check out my portfolio',
+  metadataBase,
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: SITE_URL,
+    siteName: PERSONAL_INFO.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `${PERSONAL_INFO.name} — ${PERSONAL_INFO.title}`,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: PERSONAL_INFO.name,
+  jobTitle: PERSONAL_INFO.title,
+  email: PERSONAL_INFO.email,
+  url: SITE_URL,
+  sameAs: [PERSONAL_INFO.github, PERSONAL_INFO.linkedIn],
 }
 
 export default function RootLayout({
@@ -39,12 +65,25 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme')||'midnight_steel';document.documentElement.classList.add(t)}catch(e){}})()`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} ${ibmPlexMono.variable} antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-inter`}
       >
         <ClientThemeProvider>
-          <Navbar />
+          <MobileNav />
           {children}
         </ClientThemeProvider>
       </body>

@@ -31,7 +31,7 @@ function ScreenshotPlaceholder({ title }: { title: string }) {
 
 interface BrowserFrameProps {
   projectTitle: string
-  screenshotPath: string
+  screenshotPath?: string
   containerClassName?: string
   showPlaceholder: boolean
   onImageError: () => void
@@ -57,7 +57,7 @@ function BrowserFrame({
       </div>
       {/* Screenshot container */}
       <div className={cn('relative overflow-hidden group', containerClassName)}>
-        {showPlaceholder ? (
+        {showPlaceholder || !screenshotPath ? (
           <ScreenshotPlaceholder title={projectTitle} />
         ) : (
           <Image
@@ -81,7 +81,7 @@ function BrowserFrame({
 
 interface PhoneFrameProps {
   projectTitle: string
-  screenshotPath: string
+  screenshotPath?: string
   containerClassName?: string
   showPlaceholder: boolean
   onImageError: () => void
@@ -103,7 +103,7 @@ function PhoneFrame({
         </div>
         {/* Screenshot container */}
         <div className={cn('relative overflow-hidden group', containerClassName)}>
-          {showPlaceholder ? (
+          {showPlaceholder || !screenshotPath ? (
             <ScreenshotPlaceholder title={projectTitle} />
           ) : (
             <Image

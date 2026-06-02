@@ -16,7 +16,7 @@ export interface Project {
   title: string
   description: string
   techStack: string[]
-  screenshotPath: string
+  screenshotPath?: string
   role: string
   company: string
   type: ProjectType

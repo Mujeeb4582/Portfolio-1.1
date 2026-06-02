@@ -20,11 +20,11 @@ export const PERSONAL_INFO: PersonalInfo = {
   whatsApp: '+92-3479334219',
   github: 'https://github.com/Mujeeb4582',
   linkedIn: 'https://linkedin.com/in/mujeeb-ur-rahman',
-  bio: 'Full-Stack Web Developer with 4+ years of experience building production-grade web and mobile applications. Specializing in React, Next.js, TypeScript, and React Native. Passionate about clean code, developer experience, and building products that solve real problems.',
+  bio: 'Full-Stack Web Developer with 5+ years of experience building production-grade web and mobile applications. Specializing in React, Next.js, TypeScript, and React Native, with a growing focus on agentic, AI-powered products — real-time voice interfaces, LLM orchestration, computer vision, and biometric authentication. Passionate about clean code, developer experience, and building products that solve real problems.',
   stats: {
-    yearsExperience: 4,
-    projectsCompleted: 6,
-    technologiesUsed: 20,
+    yearsExperience: 5,
+    projectsCompleted: 7,
+    technologiesUsed: 25,
   },
 }
 
@@ -43,9 +43,11 @@ export const ABOUT_PARAGRAPHS: AboutParagraph[] = [
     { text: '.' },
   ],
   [
-    { text: 'My main focus these days is building accessible, pixel-perfect products at ' },
+    { text: 'My main focus these days is building voice-first, agentic AI health products at ' },
+    { text: 'AcceliDx', highlight: true, href: 'https://accelidx.com' },
+    { text: ', where I work on a smart-mirror wellness coach — real-time conversational AI, computer-vision health sensing, and face + voice biometric authentication. Before that, I spent three years at ' },
     { text: 'Wonder Crafts', highlight: true, href: 'https://wondercrafts.com' },
-    { text: ', where I work on AI-powered tools that help real estate professionals make data-driven decisions. I enjoy building things that live at the intersection of design and engineering — products that look great and are built with solid, maintainable code.' },
+    { text: ' building AI-powered tools for real estate professionals. I enjoy building things that live at the intersection of design and engineering — products that look great and are built with solid, maintainable code.' },
   ],
   [
     { text: 'When I’m not at the computer, I’m usually exploring new technologies, contributing to open-source, or experimenting with ' },
@@ -62,6 +64,29 @@ export const ABOUT_PARAGRAPHS: AboutParagraph[] = [
 
 export const PROJECTS: Project[] = [
   {
+    title: 'Avicenna / Lumina / SOMA',
+    description:
+      'Voice-first, camera-aware smart-mirror AI health coach. Users are recognized by face and voice and coached through natural conversation, with touch reserved for sensitive input. Built as two deployable units — a Next.js 16 / React 19 frontend on Vercel and a unified FastAPI biometric backend (Dockerized, on Hetzner) — with real-time conversational voice over the OpenAI Realtime API, face + voice authentication, and Supabase-backed identity, transcripts, and usage accounting.',
+    techStack: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'TailwindCSS',
+      'FastAPI',
+      'Python',
+      'Supabase',
+      'OpenAI Realtime API',
+      'InsightFace',
+      'WeSpeaker',
+      'Docker',
+      'Vercel',
+      'Hetzner',
+    ],
+    role: 'Full-Stack Web Developer',
+    company: 'AcceliDx',
+    type: 'web',
+  },
+  {
     title: 'Buildable',
     description:
       'AI-powered real estate analytics platform for Dubai with a chat-first agentic interface. Features 40+ tools, automated report generation, and market analysis capabilities.',
@@ -76,7 +101,6 @@ export const PROJECTS: Project[] = [
       'Langfuse',
       'Docker',
     ],
-    screenshotPath: '/projects/buildable.webp',
     role: 'Full-Stack Web Developer',
     company: 'Wonder Crafts',
     type: 'web',
@@ -86,7 +110,6 @@ export const PROJECTS: Project[] = [
     description:
       "Large-scale enterprise mobile application for Saudi Arabia's Ministry of Investment. Features industrial licensing workflows, secure authentication, and real-time chat.",
     techStack: ['React Native', 'TypeScript', 'Zustand', 'REST APIs'],
-    screenshotPath: '/projects/misa.webp',
     role: 'React Native Developer',
     company: 'RGX Labs',
     type: 'mobile',
@@ -103,7 +126,6 @@ export const PROJECTS: Project[] = [
       'Google Maps',
       'Firebase',
     ],
-    screenshotPath: '/projects/uber-like.webp',
     role: 'React Native Developer',
     company: 'Techiosis',
     type: 'mobile',
@@ -121,7 +143,6 @@ export const PROJECTS: Project[] = [
       'GraphQL',
       'AWS',
     ],
-    screenshotPath: '/projects/review.webp',
     role: 'Full-Stack Web Developer',
     company: 'Wonder Crafts',
     type: 'web',
@@ -138,7 +159,6 @@ export const PROJECTS: Project[] = [
       'Firebase',
       'Node.js',
     ],
-    screenshotPath: '/projects/lstn.webp',
     role: 'Full-Stack Web Developer',
     company: 'Wonder Crafts',
     type: 'web',
@@ -155,7 +175,6 @@ export const PROJECTS: Project[] = [
       'Firebase',
       'Node.js',
     ],
-    screenshotPath: '/projects/wellshared.webp',
     role: 'Full-Stack Web Developer',
     company: 'Wonder Crafts',
     type: 'web',
@@ -168,9 +187,23 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCE: Experience[] = [
   {
+    company: 'AcceliDx',
+    role: 'Full-Stack Web Developer',
+    dateRange: 'May 2026 – Present',
+    location: 'Remote',
+    responsibilities: [
+      'Built a voice-first, camera-aware smart-mirror AI health coach as two deployable units: a Next.js 16 / React 19 frontend (Vercel) and a unified FastAPI biometric backend (Dockerized, on Hetzner)',
+      'Implemented real-time conversational voice using the OpenAI Realtime API over WebRTC (speech-to-text, text-to-speech, and LLM responses)',
+      'Built face and voice authentication — a 1:N face match plus speaker verification that mints a signed session token for returning users',
+      'Integrated Supabase for user identity, profiles, and conversation transcripts, with usage and cost accounting for voice sessions',
+      'Developed voice-intent routing (navigation, logging, querying health data, custom tracking) and a wake-word listening flow with barge-in support',
+    ],
+    projects: [{ title: 'Avicenna / Lumina / SOMA' }],
+  },
+  {
     company: 'Wonder Crafts',
     role: 'Full-Stack Web Developer',
-    dateRange: 'May 2023 – Present',
+    dateRange: 'May 2023 – Apr 2026',
     location: 'Remote',
     responsibilities: [
       'Built and maintained Buildable, an AI-powered real estate analytics platform with agentic chat interface and 40+ tools',
@@ -187,7 +220,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     company: 'Techiosis',
-    role: 'React Native Developer',
+    role: 'React Native Developer (Part-time)',
     dateRange: 'May 2025 – Dec 2025',
     location: 'Remote',
     responsibilities: [
@@ -199,7 +232,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     company: 'RGX Labs',
-    role: 'React Native Developer',
+    role: 'React Native Developer (Part-time)',
     dateRange: 'Nov 2024 – Apr 2025',
     location: 'Remote',
     responsibilities: [
@@ -277,14 +310,15 @@ export const SKILLS: Skill[] = [
   { name: 'React Native', category: 'Mobile', proficiency: 'core' },
   // LLM/AI — proficient
   { name: 'OpenAI API', category: 'LLM/AI', proficiency: 'proficient' },
+  { name: 'OpenAI Realtime API', category: 'LLM/AI', proficiency: 'proficient' },
   { name: 'Gemini API', category: 'LLM/AI', proficiency: 'proficient' },
-  { name: 'LiteLLM', category: 'LLM/AI', proficiency: 'proficient' },
   { name: 'Langfuse', category: 'LLM/AI', proficiency: 'proficient' },
   {
     name: 'Prompt Engineering',
     category: 'LLM/AI',
     proficiency: 'proficient',
   },
+  { name: 'Streaming Responses', category: 'LLM/AI', proficiency: 'proficient' },
   // Tools — core
   { name: 'Git', category: 'Tools', proficiency: 'core' },
   { name: 'GitHub', category: 'Tools', proficiency: 'core' },
